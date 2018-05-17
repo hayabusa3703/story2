@@ -51,5 +51,6 @@ production:
   <<: *default
   database: story2_production
   username: root
-  password: <%= ENV['STORY2_DATABASE_PASSWORD'] %>
+  # password: <%= ENV['STORY2_DATABASE_PASSWORD'] %>
+  password: <%= ENV['DATABASE_PASSWORD'] %>
   socket: /var/lib/mysql/mysql.sock
