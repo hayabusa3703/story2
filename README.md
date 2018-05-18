@@ -38,3 +38,4 @@
 |user|references|null: false, foreign_key: true||
 |category|reference|null: false, foreign_key: true||
 |created_at|datetime|
+aaaaaaaa
