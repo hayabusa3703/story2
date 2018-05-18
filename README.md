@@ -1,24 +1,40 @@
-# README
+# テーブル設計
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+## userテーブル
 
-* Ruby version
+|Column|Type|Options|
+|------|----|-------|
+|name|string||null: false, unique: true|
+|image|string||
+|registration_date|datetime|
+|facbook_id|integer|
 
-* System dependencies
+### Association
 
-* Configuration
+- has_many :storys,
+- has_many :followers
+- has_many :comments
 
-* Database creation
+## commentテーブル
 
-* Database initialization
+|Column|Type|Options|
+|------|----|-------|
+|comment|string|null: false, unique: true|
+|story|references|null: false, foreign_key: true||
+|user|references|null: false, foreign_key: true||
 
-* How to run the test suite
+### Association
+- belongs_to :user
+- belongs_to :story
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+## storyテーブル
 
-* ...
+|Column|Type|Options|
+|------|----|-------|
+|textarea|text||
+|like-point|integer|
+|user|references|null: false, foreign_key: true||
+|category|reference|null: false, foreign_key: true||
+|created_at|datetime|
