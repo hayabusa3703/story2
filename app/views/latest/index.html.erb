@@ -4,8 +4,8 @@
     <div class="categorybar">
       <div class="category-container">
         <div class="menu">
-          <a class="active category__bg__after top" href="/"><span data-is="print" label="TOP">TOP</span></a>
-          <a class=" category__bg__after latest" href="/latest"><span data-is="print" label="新着">新着</span></a>
+          <a class=" category__bg__after top" href="/"><span data-is="print" label="TOP">TOP</span></a>
+          <a class="active category__bg__after latest" href="/latest"><span data-is="print" label="新着">新着</span></a>
           <a class=" category__bg__after legend" href="/legend"><span data-is="print" label="殿堂入り">殿堂入り</span></a>
           <a class=" category__bg__after love" href="/category/love"><span data-is="print" label="恋愛">恋愛</span></a>
           <a class=" category__bg__after marry" href="/category/marry"><span data-is="print" label="結婚">結婚</span></a>
@@ -20,50 +20,25 @@
     </div>
   </div>
 </div>
-<div class="container">
+<div class="container-latest">
   <%= render 'application/toolbar'%>
   <div class="main">
-    <div data-is="page-index">
-      <a class="katarie-image" href="">
-        <img class="yoshimoto-logo" src="/images/tieup/katarie/yoshimoto_logo.png">
-        <img class="katarie-logo" src="/images/tieup/katarie/katarie2_big_bnr_logo.png">
-        <img class="storys-logo" src="/images/layouts/logo-white.png">
-        <p>大賞発表</p>
-      </a>
-    </div>
-    <div data-is="write-field">
-      <div class="write-field-container">
-        <div class="write-field-wrapper">
-          <div class="text">あなたのストーリーを教えてください</div>
-          <div class="form">
-            <form>
-              <input class="post-input" type="text" name="title" placeholder="タイトルを入力...">
-              <button name="button" type="submit" id = "transmission__button">
-                <i class="fa fa-pencil"></i>
-                送信
-              </button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
     <div class="contents">
       <div class="contents-container clearfix">
         <div class="layout-column-main">
+          <h1 class="h1-global">
+            <i class="fa fa-flash"></i>
+            新着のストーリー</h1>
           <div class="story-list clearfix">
-            <%= render 'application/story-box'%>
-            <%= render 'application/story-box'%>
-            <%= render 'application/story-box'%>
-            <%= render 'application/story-box'%>
+            <!-- ストーリーボックスの中身 -->
+            <%= render 'latest/story-box'%>
+            <!-- ストーリーボックスの中身 -->
           </div>
+          <%= render 'layouts/pagenation' %>
+          <%= render 'layouts/recommend'%>
         </div>
-        <div class="layout-column-right">
-          <div class="ad">広告
-          </div>
-          <%= render 'application/ranking' %>
-        </div>
+        <%= render 'latest/rightside' %>
       </div>
-      <%= render 'application/category' %>
     </div>
     <%= render 'application/footer' %>
   </div>

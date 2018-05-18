@@ -1,0 +1,15 @@
+<div class="container"><!-- 投稿画面とサイドバーの全体 -->
+  <div class="toolbar"><!-- サイドバー画面 -->
+  </div>
+
+  <!-- ストリーの投稿画面 -->
+  <div class="contents">
+    <%= form_tag('/storys', method: :post) do %>
+      <textarea placeholder="タイトル" type="string" name="title" value="下書き" id="story_title" cols="100" rows="5"></textarea><br></br>
+      <input placeholder="カテゴリ" type="number" name="category_id" cols="100" rows="5"><br>
+      <p>↓本文を入力してください</p>
+      <textarea placeholder="テキスト" name="text" cols="100" rows="30"></textarea><br>
+      <input type="submit" value="公開する">
+   <% end %>
+  </div>
+</div>

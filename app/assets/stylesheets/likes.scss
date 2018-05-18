@@ -1,0 +1,15 @@
+// Place all the styles related to the likes controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+#like-button {
+  border: none;
+  background: linear-gradient(#fff79a, #fff006);
+  line-height: 30px;
+  color: #874200;
+  font-size: 14px;
+  padding: 0 20px;
+  z-index: 100;
+}

@@ -1,0 +1,11 @@
+<% @storys.each do |story| %>
+<% if user_signed_in? %>
+    <%= button_to story_likes_path(story), id: "like-button", remote: true do %>
+        <input type= "button" value='読んで良かった' onclick= "window.location.reload()">
+      <span>
+        <%= story.likes_count %>
+      </span>
+    <% end %>
+<% end %>
+<% end %>
+

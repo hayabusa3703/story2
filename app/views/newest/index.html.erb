@@ -1,0 +1,108 @@
+<header class="header">
+  <div class="header-wrapper">
+    <div class="titlebar"><% if user_signed_in? %>
+          <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+      <% else %>
+          <%= link_to "ログイン", new_user_session_path, class: 'post' %>
+          <%= link_to "新規登録", new_user_registration_path, class: 'post' %>
+      <% end %>
+      <div class="left">
+        <div class="header-search">
+          <form>
+            <div class="search-wrapper">
+              <button type="submit">
+                <i class="fa fa-search"></i>
+              </button>
+              <input type="text" name="q" placeholder="ストーリーを検索...">
+            </div>
+          </form>
+        </div>
+      </div>
+      <a class="logo">STORYS.JP</a>
+      <div class="right">
+        <div class="header-menu">
+          <div class="inner clearfix">
+            <div class="dropdown"></div>
+            <a class="yoshimitsu egashira" href=""></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="categorybar">
+    <div class="categorybar-wrapper">
+      <div class="category-container">
+        <div class="menu">
+          <a>TOP</a>
+          <a>新着</a>
+          <a>殿堂入り</a>
+          <a>恋愛</a>
+          <a>結婚</a>
+          <a>勉強</a>
+          <a>仕事</a>
+          <a>新生活</a>
+          <a>旅行</a>
+          <a>病気</a>
+          <a>日常生活</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<div class="container">
+  <div class="toolbar">
+    <div class="toolbar clearfix">
+      <div class="user">
+        <a class="img" href=""></a>
+        <a class="user-name" href="">egashira kun</a>
+        <div class="discription">まだプロフィールが入力されていません。</div>
+        <a data-is="button-grd" href="/storys/new"><i class="fa fa-arrow-right"></i><span>ストーリーを書く</span></a>
+      </div>
+      <div class="menu">
+        <a href="">
+          <i></i>
+          <span>マイページ</span>
+        </a>
+        <a href="">
+          <i></i>
+          <span>本棚</span>
+        </a>
+        <a href="">
+          <i></i>
+          <span>管理</span>
+        </a>
+        <a href="">
+          <i></i>
+          <span>通知</span>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="main">
+    <div class="page-index"></div>
+    <div class="write-field">
+      <div class="write-field-container">
+        <div class="write-field-wrapper">
+          <div class="text">あなたのストーリーを教えてください</div> <%= paginate(@storys) %> <!--  ページネーションの仮置きです。 -->
+             <li class = "botton__popular">
+               <%= link_to '人気', "aaa" %>
+             </li>
+             <li class = "botton__newest">
+               <%= link_to '新着', "/storys/newest" %>
+             </li>
+          <div class="form"></div>
+        </div>
+      </div>
+    </div>
+    <div class="contents">
+      <% @storys.each do |story| %>
+          <span class="name"><%= story.title %></span>
+        <%= link_to '編集', "storys/#{story.id}/edit", method: :get %>
+        <%= link_to '削除', "storys/#{story.id}", method: :delete %>
+          <p><%= story.text %></p>
+      <% end %>  <!-- 編集ボタン削除ボタンの実装です。 -->
+       <%= render 'likes/like'%>
+    </div>
+    <div class="footer"></div>
+  </div>
+</div>
