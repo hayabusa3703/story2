@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .container-latest {
-  padding-top: 97px;
+  padding-top: 90px;
   height: 100vh;
 }
 
@@ -17,6 +17,9 @@
   padding: 12px 16px 9px;
   margin-bottom: 20px;
   text-align: center;
+}
+
+.category-bar {
 }
 
 .story-minibox {
@@ -88,7 +91,7 @@
         line-height: 1;
         text-decoration: none;
         font-weight: normal;
-        font-size: 10px;
+        font-size: 16px;
       }
       a {
         display: block;
