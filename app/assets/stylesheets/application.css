@@ -494,8 +494,8 @@ span {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  margin: 40px auto 20px;
-  background-image: url(/images/tieup/katarie/katarie_vol2_bnr_bg.png);
+  margin: -3px auto 20px;
+  background-image: url(https://storys.jp/images/tieup/katarie/katarie_vol2_bnr_bg.png);
 }
 
 .katarie-image{
