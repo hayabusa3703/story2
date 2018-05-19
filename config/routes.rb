@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'categories/index'
+
+  get 'battle/test'
+
   devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root 'application#index'
@@ -23,20 +27,8 @@ Rails.application.routes.draw do
   post  'category/sick'      =>  'storys#create'
   post  'category/daily'     =>  'storys#create'
 
-  get  'category/love/newest' => 'love#index'
+  get  'category' => 'categories#index'
     # loveカテゴリで新着順にする。love indexに記述？　newestに記述？
-  get  'newest' => 'newest#index'
-  get  'category/love' => 'love#index'
-  get  'category/marry' => 'marry#index'
-  get  'category/study' => 'study#index'
-  get  'category/work' => 'work#index'
-  get  'category/newlife' => 'newlife#index'
-  get  'category/trip' => 'trip#index'
-  get  'category/sick' => 'sick#index'
-  get  'category/daily' => 'daily#index'
-
-
-
 
 
 
