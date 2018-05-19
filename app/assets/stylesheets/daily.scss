@@ -1,13 +1,50 @@
-// Place all the styles related to the legend controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-// Place all the styles related to the latest controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
 .container-latest {
-  padding-top: 97px;
+  padding-top: 90px;
   height: 100vh;
+}
+
+.category-bar {
+  height: 100px;
+  padding: 0 40px 0;
+}
+
+.category-wall {
+  margin-bottom: 20px;
+}
+
+.bar {
+  overflow: hidden;
+  position: relative;
+  height: 80px;
+  position: relative;
+}
+
+.bar p {
+  position: absolute;
+  color: white;
+  top: 24px;
+  left: 504px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.bar img {
+  width: 100%;
+}
+
+.order-main {
+  height: 40px;
+}
+
+.order-menus {
+  float: right;
+}
+
+.layout-column-main {
+}
+
+.layout-column-right {
+  padding-top: 35px;
 }
 
 .h1-global {
@@ -21,6 +58,21 @@
   margin-bottom: 20px;
   text-align: center;
 }
+
+.category__label.daily.category__label__after {
+  display: block;
+  color: #FFF;
+  font-weight: bold;
+  font-size: 12px;
+  padding: 5px 0;
+  text-decoration: none;
+  width: 75px;
+  text-align: center;
+  background: #d9bf00;
+  box-shadow: 0 1px 3px 0px rgba(1, 1, 1, 0.4);
+  border-radius: 2px 2px 2px 0;
+}
+
 
 .story-minibox {
   .wrapper {
@@ -63,46 +115,46 @@
 }
 
 
-.pagination {
-  padding-bottom: 20px;
-  text-align: center;
-  .wrapper {
-    display: inline-block;
-    border-radius: 5px;
-    margin: 0;
-    padding: 0;
-    box-shadow: none;
-    background-color: inherit;
-    border: none;
-    height: inherit;
-    li {
-      float: left;
-      border: 1px solid #736335;
-      margin-right: -1px;
-      margin-bottom: 5px;
-      .current {
-        background: #938355;
-        color: #FFF;
-      }
-      span {
-        display: block;
-        color: #736335;
-        padding: 10px 15px;
-        line-height: 1;
-        text-decoration: none;
-        font-weight: normal;
-        font-size: 10px;
-      }
-      a {
-        display: block;
-        color: #736335;
-        padding: 10px 15px;
-        line-height: 1;
-        text-decoration: none;
-      }
-    }
-  }
-}
+// .pagination {
+//   padding-bottom: 20px;
+//   text-align: center;
+//   .wrapper {
+//     display: inline-block;
+//     border-radius: 5px;
+//     margin: 0;
+//     padding: 0;
+//     box-shadow: none;
+//     background-color: inherit;
+//     border: none;
+//     height: inherit;
+//     li {
+//       float: left;
+//       border: 1px solid #736335;
+//       margin-right: -1px;
+//       margin-bottom: 5px;
+//       .current {
+//         background: #938355;
+//         color: #FFF;
+//       }
+//       span {
+//         display: block;
+//         color: #736335;
+//         padding: 10px 15px;
+//         line-height: 1;
+//         text-decoration: none;
+//         font-weight: normal;
+//         font-size: 10px;
+//       }
+//       a {
+//         display: block;
+//         color: #736335;
+//         padding: 10px 15px;
+//         line-height: 1;
+//         text-decoration: none;
+//       }
+//     }
+//   }
+// }
 
 ._popIn_recommend_container {
   padding: 0;
