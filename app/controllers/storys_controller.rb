@@ -1,16 +1,16 @@
 class StorysController < ApplicationController
+
   before_action :move_to_index, except: :index
 
   def index
-    @storys = Story.all.page(params[:page]).per(1).order('created_at DESC')
+    @storys = Story.all.page(params[:page]).per(4)
   end
 
   def new
   end
 
   def create
-    @story = Story.new(story_params)
-    @story.save
+    Story.create(story_params)
   end
 
   def destroy
@@ -19,11 +19,8 @@ class StorysController < ApplicationController
   end
 
   def update
-    @story = Story.find_by(id: params[:id])
-    @story.title = params[:title]
-    @story.text = params[:text]
-    @story.save
-    redirect_to("/storys")
+    story = Story.find(params[:id])
+    story.update(story_params)
   end
 
   def edit
@@ -39,3 +36,6 @@ class StorysController < ApplicationController
     redirect_to action: :index unless user_signed_in?
   end
 end
+
+
+
