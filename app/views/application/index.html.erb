@@ -14,7 +14,7 @@
           <a class=" category__bg__after newlife" href="/category/newlife"><span data-is="print" label="新生活">新生活</span></a>
           <a class=" category__bg__after trip" href="/category/trip"><span data-is="print" label="旅行">旅行</span></a>
           <a class=" category__bg__after sick" href="/category/sick"><span data-is="print" label="病気">病気</span></a>
-          <a class=" category__bg__after dairy" href="/category/dairy"><span data-is="print" label="日常生活">日常生活</span></a>
+          <a class=" category__bg__after daily" href="/category/daily"><span data-is="print" label="日常生活">日常生活</span></a>
         </div>
       </div>
     </div>
@@ -22,23 +22,12 @@
 </div>
 <div class="container">
   <%= render 'application/toolbar'%>
-  <div class="toolbar">
-    <div class="user">yoshimitsu egashira</div>
-    <div class="menu">
-      <ul>
-        <li>マイページstory2</li>
-        <li>本棚</li>
-        <li>管理</li>
-        <li>通知</li>
-      </ul>
-    </div>
-  </div>
   <div class="main">
     <div data-is="page-index">
       <a class="katarie-image" href="">
-        <img class="yoshimoto-logo" src="/images/tieup/katarie/yoshimoto_logo.png">
-        <img class="katarie-logo" src="/images/tieup/katarie/katarie2_big_bnr_logo.png">
-        <img class="storys-logo" src="/images/layouts/logo-white.png">
+        <img class="yoshimoto-logo" src="https://storys.jp/images/tieup/katarie/yoshimoto_logo.png">
+        <img class="katarie-logo" src="https://storys.jp/images/tieup/katarie/katarie2_big_bnr_logo.png">
+        <img class="storys-logo" src="https://storys.jp/images/layouts/logo-white.png">
         <p>大賞発表</p>
       </a>
     </div>
@@ -49,7 +38,7 @@
           <div class="form">
             <form>
               <input class="post-input" type="text" name="title" placeholder="タイトルを入力...">
-              <button name="button" type="submit" id = "transmission__button">
+              <button name="button" type="submit">
                 <i class="fa fa-pencil"></i>
                 送信
               </button>
