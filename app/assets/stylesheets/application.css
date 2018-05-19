@@ -488,13 +488,13 @@ span {
 }
 
 [data-is="page-index"] {
-  background-color: #CCC;
+  background-color: #FF6;
   height: 331px;
   width: 100%;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  margin: 77px auto 20px;
+  margin: 40px auto 20px;
   background-image: url(/images/tieup/katarie/katarie_vol2_bnr_bg.png);
 }
 
