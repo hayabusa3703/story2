@@ -8,10 +8,12 @@ class StorysController < ApplicationController
   end
 
   def new
+    @categorys = Category.all
   end
 
   def create
     Story.create(story_params)
+    @categorys = Category.all
   end
 
   def destroy
