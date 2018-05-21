@@ -85,10 +85,16 @@
           <div class="story-add-engagement">
             <h3 class="h3-global">みんなの読んで良かった！</h3>
             <div data-is="story-id-bookmark-form" >
-              …</div>
+              <div class = "inner" >
+               <div class="icon" style="background-image: url(app/assets/images/gokuuda.jpeg);">画像出ない</div>
+               <textarea>読んで良かったにコメントを添える...</textarea>
+              </div>
+                <%= render 'likes/like'%>
+                <i class = "fa fa-star"> </i>
+           </div>
           </div>
         </div>
-        <div class="layout-column-right"><h2>bbbbbb</h2>  <%= render 'likes/like'%></div>
+        <div class="layout-column-right"><h2>bbbbbb</h2>  </div>
 
         <%= render 'layouts/recommend'%>
       </div>
