@@ -7,7 +7,7 @@ class StorysController < ApplicationController
 
    def show
     @story = Story.find(params[:id])
-    # @comments = @storys.comments.includes(:user)
+    @comments = @story.comments.includes(:user)
   end
 
   def new
