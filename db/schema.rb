@@ -12,6 +12,7 @@
 
 ActiveRecord::Schema.define(version: 20180521035449) do
 
+
   create_table "categories", id: :integer, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.text "image"
     t.datetime "created_at", null: false

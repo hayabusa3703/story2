@@ -233,20 +233,6 @@ form {
 }
 
 .toolbar > .wall {
-  background:
-     linear-gradient(
-      90deg,
-      rgba(208, 147, 82, 0.6),
-      rgba(192, 134, 70, 0.6) 60%,
-      rgba(208, 147, 82, 0.6)
-    ),
-    repeating-radial-gradient(
-      ellipse at 60% 500%,
-      #c08646,
-      #c08646 0.2%,
-      #d09352 0.6%,
-      #d09352 1%
-    );
   border-radius: 0;
 }
 
@@ -256,7 +242,6 @@ form {
   width: 100%;
   display: block;
   padding-top: 100px;
-  /*background-color: #FAFAFA;*/
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
 }
@@ -488,14 +473,14 @@ span {
 }
 
 [data-is="page-index"] {
-  background-color: #CCC;
+  background-color: #FF6;
   height: 331px;
   width: 100%;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  margin: 77px auto 20px;
-  background-image: url(/images/tieup/katarie/katarie_vol2_bnr_bg.png);
+  margin: -3px auto 20px;
+  background-image: url(https://storys.jp/images/tieup/katarie/katarie_vol2_bnr_bg.png);
 }
 
 .katarie-image{
