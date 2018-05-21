@@ -213,6 +213,20 @@ form {
   font-weight: normal;
 }
 
+.category__bg__after.categories {
+  white-space: nowrap;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 12px;
+  border-radius: 5px;
+  height: 22px;
+  line-height: 22px;
+  padding: 0 14px;
+  margin-right: 5px;
+  color: #FFF;
+  font-weight: normal;
+}
+
 /*container*/
 .container {
   height: 100vh;
@@ -963,4 +977,17 @@ vertical-align: middle;
 
 .textarea {
   height: 300px;
+}
+
+.category__label.love.category__label__after {
+  display: block;
+  color: #FFF;
+  font-weight: bold;
+  font-size: 12px;
+  padding: 5px 0;
+  text-decoration: none;
+  width: 75px;
+  text-align: center;
+  box-shadow: 0 1px 3px 0px rgba(1, 1, 1, 0.4);
+  border-radius: 2px 2px 2px 0;
 }
