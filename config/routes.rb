@@ -6,6 +6,11 @@ Rails.application.routes.draw do
       resources :likes, only: [:create, :destroy]
     end
 
+    resources :storys do
+      resources :comments, only: [:create]
+    end
+    resources :users, only: [:show]
+
   get   'storys'  =>  'storys#index'
   get   'storys/new'  =>  'storys#new'
   post  'storys'      =>  'storys#create'
@@ -13,7 +18,6 @@ Rails.application.routes.draw do
   patch  'storys/:id' => 'storys#update'
   get  'storys/:id/edit' => 'storys#edit'
   get  'newest' => 'newest#index'
-
   get 'latest' => 'latest#index'
   get 'legend' => 'legend#index'
 end
