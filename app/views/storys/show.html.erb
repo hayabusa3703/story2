@@ -15,6 +15,7 @@
           <a class=" category__bg__after trip" href="/category/trip"><span data-is="print" label="旅行">旅行</span></a>
           <a class=" category__bg__after sick" href="/category/sick"><span data-is="print" label="病気">病気</span></a>
           <a class=" category__bg__after dairy" href="/category/dairy"><span data-is="print" label="日常生活">日常生活</span></a>
+
         </div>
       </div>
     </div>
@@ -88,9 +89,24 @@
             <div data-is="story-id-bookmark-form" >
               <div class = "inner" >
                <div class="icon"></div>
-               <textarea>読んで良かったにコメントを添える...</textarea>
-              </div>
+                 <% if current_user %>
+                    <%= form_tag("/storys/#{@story.id}/comments", method: :post) do %>
+                      <textarea name = "text"></textarea>
+                      <input type="submit" value="SENT">
+                    <% end %>
+                 <% end %>
+             </div>
                 <%= render 'likes/like'%>
+                 <div class="comments">
+      <h2>＜コメント一覧＞</h2>
+      <% if @comments %>
+        <% @comments.each do |comment| %>
+          <p>
+            <%= comment.text %>
+          </p>
+        <% end %>
+      <% end %>
+    </div>
                 <i class = "fa fa-star"> </i>
            </div>
           </div>

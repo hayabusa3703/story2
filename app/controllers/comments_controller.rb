@@ -1,6 +1,7 @@
 class CommentsController < ApplicationController
   def create
-    Comment.create(text: comment_params[:text], story_id: comment_params[:story_id], user_id: current_user.id)
+    @comment = Comment.create(text: comment_params[:text], story_id: comment_params[:story_id], user_id: current_user.id)
+    redirect_to "/storys/#{@comment.story.id}"
   end
 
   private
