@@ -4,8 +4,8 @@
   <div class="main">
     <div class="category-bar" id="category-wall">
       <div class="bar">
-        <img src="https://storys.jp/images/category/%E6%97%A5%E5%B8%B8%E7%94%9F%E6%B4%BB.jpg" alt="日常生活">
-        <p>日常生活</p>
+        <img src="<%= @category.image %>" alt="<%= @category.name %>">
+        <p><%= @category.name %></p>
       </div>
     </div>
     <div class="main-contents">
@@ -21,7 +21,7 @@
               </a>
               <a href="/">
                 <span data-is="raw" content="新着">
-                  <%= link_to '新着', "/category/daily/newest" %>
+                  <%= link_to '新着', "/category/love/newest" %>
                 </span>
 
               </a>
@@ -30,13 +30,12 @@
               </a>
             </div>
           </div>
-
           <div class="story-list clearfix">
             <!-- ストーリーボックスの中身 -->
-            <%= render 'daily/daily-story-box'%>
+            <%= render 'categorys/category-story-box'%>
             <!-- ストーリーボックスの中身 -->
           </div>
-          <%= render 'layouts/daily-pagenation' %>
+          <%= render 'layouts/love-pagenation' %>
           <%= render 'layouts/recommend'%>
         </div>
           <div class="all-count">
