@@ -98,11 +98,12 @@
       <% @storys.each do |story| %>
           <span class="name"><%= story.title %></span>
          <%= link_to '詳細', "/storys/#{story.id}", method: :get %>
+      <% if user_signed_in? && current_user.id == story.user_id %>
         <%= link_to '編集', "storys/#{story.id}/edit", method: :get %>
         <%= link_to '削除', "storys/#{story.id}", method: :delete %>
+      <% end %>
           <p><%= story.text %></p>
       <% end %>  <!-- 編集ボタン削除ボタンの実装です。 -->
-       <%= render 'likes/like'%>
     </div>
     <div class="footer"></div>
   </div>
