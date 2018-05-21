@@ -97,6 +97,7 @@
     <div class="contents">
       <% @storys.each do |story| %>
           <span class="name"><%= story.title %></span>
+         <%= link_to '詳細', "/storys/#{story.id}", method: :get %>
         <%= link_to '編集', "storys/#{story.id}/edit", method: :get %>
         <%= link_to '削除', "storys/#{story.id}", method: :delete %>
           <p><%= story.text %></p>

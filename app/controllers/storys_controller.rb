@@ -1,8 +1,13 @@
 class StorysController < ApplicationController
-  before_action :move_to_index, except: :index
+  before_action :move_to_index, except: [:index, :show]
 
   def index
     @storys = Story.all.page(params[:page]).per(1).order('created_at DESC')
+  end
+
+   def show
+    @story = Story.find(params[:id])
+    # @comments = @storys.comments.includes(:user)
   end
 
   def new
