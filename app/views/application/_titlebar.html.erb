@@ -40,7 +40,7 @@
           <a class=" category__bg__after latest" href="/latest"><span data-is="print" label="新着">新着</span></a>
           <a class=" category__bg__after legend" href="/legend"><span data-is="print" label="殿堂入り">殿堂入り</span></a>
           <% @categorys.each do |category| %>
-            <%= link_to category.name, category_path(category), class:"category__bg__after love" %>
+            <%= link_to category.name, category_path(category), class:"category__bg__after categories" %>
           <% end %>
         </div>
       </div>
