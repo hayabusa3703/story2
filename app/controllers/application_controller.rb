@@ -3,6 +3,5 @@ class ApplicationController < ActionController::Base
 
   def index
     @categorys = Category.all
-
   end
 end
