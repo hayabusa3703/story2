@@ -3,7 +3,8 @@ class StorysController < ApplicationController
   before_action :move_to_index, except: :index
 
   def index
-    @storys = Story.all.page(params[:page]).per(4)
+    stories__num = 4
+    @storys = Story.all.page(params[:page]).per(stories__num)
     @categorys = Category.all
   end
 
