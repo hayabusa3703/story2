@@ -1,8 +1,7 @@
 <%= render 'application/titlebar'%>
-<div class="container"><!-- 投稿画面とサイドバーの全体 -->
-    <div class="toolbar"><!-- サイドバー画面 -->
+<div class="container">
+    <div class="toolbar">
     </div>
-      <!-- ストリーの投稿画面 -->
       <div class="contentsss">
         <%= form_tag('/storys', method: :post) do %>
           <textarea placeholder="タイトル" type="string" name="title" value="下書き" id="story_title" cols="100" rows="5"></textarea><br></br>

@@ -5,6 +5,10 @@ Rails.application.routes.draw do
   resources :storys do
     resources :likes, only: [:create, :destroy]
     resources :new, only: [:index, :new]
+    member do
+      delete :destroy
+      patch :update
+    end
   end
 
   resources :categorys , only: [:index, :show] do
@@ -13,8 +17,6 @@ Rails.application.routes.draw do
     end
   end
 
-  delete 'storys/:id' =>  'storys#destroy'
-  patch  'storys/:id' => 'storys#update'
   get  'storys/:id/edit' => 'storys#edit'
   get 'latest' => 'latest#index'
   get 'legend' => 'legend#index'
