@@ -1,14 +1,7 @@
 class CategorysController < ApplicationController
 
   before_action :set_category, only: [:index, :show, :newest]
-
-  def index
-    @storys = Story.where(category_id: params[:id])
-  end
-
-  def show
-    @storys = Story.where(category_id: params[:id])
-  end
+  before_action :set_sort, only: [:index, :show]
 
   def newest
     @storys = Story.where(category_id: params[:id]).order("created_at DESC")
@@ -20,6 +13,9 @@ class CategorysController < ApplicationController
       @categorys = Category.all
       @category = Category.find(params[:id])
     end
+
+    def set_sort
+      @storys = Story.where(category_id: params[:id])
 
     def story_params
       params.permit(:title, :category_id, :text).merge(user_id: current_user.id)
