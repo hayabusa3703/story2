@@ -873,7 +873,7 @@ h4 {
     background: rgba(255, 255, 255, 0.4);
 }
 
-[data-is="pages-index-bottom-category"] > .inner > .ajax-container > a {
+[data-is="pages-index-bottom-category"] > .inner > .ajax-container > .catebtn {
   width: 220px;
   height: 30px;
   box-sizing: border-box;
@@ -889,7 +889,7 @@ h4 {
   background: #FFF -webkit-linear-gradient(left, #FF8300, #FFA900);
 }
 
-[data-is="pages-index-bottom-category"] .inner > .ajax-container > a > i {
+[data-is="pages-index-bottom-category"] .inner > .ajax-container > .catebtn > i {
   font-size: 16px;
   position: absolute;
   top: 6px;
