@@ -154,7 +154,8 @@
   }
 }
 
-._popIn_recommend_container {
+._popIn_recommend {
+  &_container {
   padding: 0;
   margin: 10px auto;
   width: 700px;
@@ -163,7 +164,7 @@
   clear: both;
   overflow: hidden;
   font-family: inherit;
-  ._popIn_recommend_header {
+  &_header {
     color: #333;
     font-size: 20px;
     font-weight: bold;
@@ -171,7 +172,7 @@
     padding: 5px 0;
     border-bottom: 1px #a0a0a0 solid;
   }
-  ._popIn_recommend_articles {
+  &_articles {
     ._popIn_recommend_article {
       display: inline-block;
       width: 33%;
@@ -217,22 +218,23 @@
       }
     }
   }
-  ._popIn_recommend_credit {
+  &_credit {
     position: relative;
     text-align: right;
     margin: 5px;
     font-size: 10px;
     opacity: 0.6;
-    ._popIn_recommend_credit_image {
-    display: inline-block;
-    width: 40px;
-    height: 10px;
-    margin: 1px 0 0 4px;
-    background-image: url(//api.popin.cc/images/logo.png);
-    background-repeat: no-repeat;
-    background-position: 0px 0px;
-    background-size: 40px 20px;
-    vertical-align: text-top;
+    &_image {
+      display: inline-block;
+      width: 40px;
+      height: 10px;
+      margin: 1px 0 0 4px;
+      background-image: url(//api.popin.cc/images/logo.png);
+      background-repeat: no-repeat;
+      background-position: 0px 0px;
+      background-size: 40px 20px;
+      vertical-align: text-top;
     }
   }
+}
 }
