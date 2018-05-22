@@ -4,8 +4,8 @@
   <div class="main">
     <div class="category-bar" id="category-wall">
       <div class="bar">
-        <img src="https://storys.jp/images/category/%E6%81%8B%E6%84%9B.jpg" alt="恋愛">
-        <p>恋愛</p>
+        <img src="<%= @category.image %>" alt="<%= @category.name %>">
+        <p><%= @category.name %></p>
       </div>
     </div>
     <div class="main-contents">
@@ -18,9 +18,8 @@
               </a>
               <a href="/">
                 <span data-is="raw" content="新着">
-                  <%= link_to '新着', "/" %>
+                  <%= link_to '新着', newest_category_path(@category) %>
                 </span>
-
               </a>
               <a class="active" href="/">
                 <span data-is="raw" content="昔の投稿">昔の投稿</span>
@@ -28,9 +27,9 @@
             </div>
           </div>
           <div class="story-list clearfix">
-            <%= render 'love/love-story-box'%>
+            <%= render 'categorys/category-story-box'%>
           </div>
-          <%= render 'layouts/love-pagenation' %>
+          <%= render 'layouts/pagenation' %>
           <%= render 'layouts/recommend'%>
         </div>
           <div class="all-count">
