@@ -1,6 +1,8 @@
 class CommentsController < ApplicationController
   def create
-    @comment = Comment.create(comment_params)
+    @story = Story.find(params[:story_id])
+    @comment = @story.comments.new(comment_params)
+    @comment.save
     redirect_to story_path(params[:story_id])
   end
 
