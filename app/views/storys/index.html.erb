@@ -33,10 +33,10 @@
       </div>
       <div class="global-box">
         <div class="container">
-          <div class="wall" style="background-image: url();">
+          <div class="wall">
             <% @storys.each do |story| %>
-              <%= link_to '削除', "/storys/#{story.id}", method: :delete, :style => "right: 115px;" %>
-              <%= link_to '編集', "/storys/#{story.id}/edit", method: :get, :style => "right: 65px;" %>
+              <%= link_to '削除', story_path(story), method: :delete, :style => "right: 115px;" %>
+              <%= link_to '編集', edit_story_path(story), :style => "right: 65px;" %>
           </div>
           <a class="read" href="/story">
             <div class="inner">
