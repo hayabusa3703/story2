@@ -1,10 +1,10 @@
 class StorysController < ApplicationController
 
   before_action :move_to_index, except: :index
+  RANDOMSTORYS = 4
 
   def index
-    stories__num = 4
-    @storys = Story.all.page(params[:page]).per(stories__num)
+    @storys = Story.all.page(params[:page]).per(RANDOMSTORYS)
     @categorys = Category.all
   end
 
