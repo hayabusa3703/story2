@@ -2,7 +2,7 @@ class StorysController < ApplicationController
 
   before_action :move_to_index, except: :index
   before_action :set_story, only: [:index, :new, :create]
-  before_action :story_find, only: [:desroy, :update, :edit]
+  before_action :story_find, only: [:desroy, :edit, :update]
   RANDOMSTORYS = 4
 
   def index
@@ -14,15 +14,19 @@ class StorysController < ApplicationController
   end
 
   def create
-    Story.create(story_params)
+    @story = Story.new(story_params)
+    @story.save
   end
 
   def destroy
     story.destroy
   end
 
+  def edit
+  end
+
   def update
-    story.update(story_params)
+    @story = Story.update(story_params)
   end
 
   private
@@ -31,7 +35,7 @@ class StorysController < ApplicationController
   end
 
   def story_find
-    story = Story.find(params[:id])
+    @story = Story.find(params[:id])
   end
 
   def story_params
