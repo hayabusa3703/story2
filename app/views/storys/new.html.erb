@@ -1,14 +1,14 @@
 <%= render 'application/titlebar' %>
 <div class="container">
-    <div class="toolbar">
-    </div>
-      <div class="contentsss">
-        <%= form_tag('/storys', method: :post) do %>
-          <textarea placeholder="タイトル" type="string" name="title" value="下書き" id="story_title" cols="100" rows="5"></textarea><br></br>
-          <input placeholder="カテゴリ" type="number" name="category_id" cols="100" rows="5"><br>
-          <p>↓本文を入力してください</p>
-          <textarea placeholder="テキスト" name="text" cols="100" rows="30"></textarea><br>
-          <input type="submit" value="公開する">
-       <% end %>
-      </div>
+  <div class="toolbar">
+  </div>
+  <div class="contentsss">
+    <%= form_for @story, url: storys_path do |f| %>
+      <%= f.text_field :title, placeholder:"タイトル" %>
+      <%= f.collection_select :category_id, Category.all, :id, :name %>
+        <p>↓本文を入力してください</p>
+      <%= f.text_area :text, placeholder:"テキスト", cols:"50", rows:"3" %>
+      <%= f.submit "公開する" %>
+    <% end %>
+  </div>
 </div>
