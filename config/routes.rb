@@ -17,7 +17,7 @@ Rails.application.routes.draw do
     end
   end
 
-  get  'storys/:id/edit' => 'storys#edit'
-  get 'latest' => 'latest#index'
-  get 'legend' => 'legend#index'
+  resources :storys, only: [:edit, :update]
+  resources :latest, only: [:index]
+  resources :legend, only: [:index]
 end
