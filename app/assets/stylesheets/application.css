@@ -229,7 +229,6 @@ form {
 
 /*container*/
 .container {
-  height: 100vh;
 }
 
 /*side*/
@@ -848,7 +847,8 @@ h4 {
 
 .ajax-index-category {}
 
-.inner {}
+.inner {
+}
 
 .ajax-container {
   position: relative;
