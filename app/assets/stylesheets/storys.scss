@@ -1,39 +1,223 @@
-.post{
-    // float: right;
-    // text-align: right;
-    // display: block;
-    // font-size: 13px;
-    // line-height: 32px;
-    // padding-right: 50px;
-    // text-decoration: none;
-}
 
-// ⬆画面の一番右側にログインと新規登録をおきたいのですが、おけないです。
-// 誰か教えていただけると嬉しいです。
-
-.botton{
-
-  &__popular{
-          border: 1px solid #db2626;
-    background: #eee;
-    background-image: linear-gradient(-180deg, #67ABFA 0%, #4A8DDC 100%);
-    border: 1px solid #4A8EDD;
-    border-radius: 3px;
-  }
-
-  &__newest{
-      border: 1px solid #db2626;
-    background: #eee;
-    background-image: linear-gradient(-180deg, #67ABFA 0%, #4A8DDC 100%);
-    border: 1px solid #4A8EDD;
-    border-radius: 3px;
-  }
-}
-
-.contents {
+[data-is="story-id-top"] {
   padding-top: 77px;
+  .pankuzu {
+    line-height: 32px;
+    padding: 0 10px;
+    height: 33px;
+    .container {
+      width: 1088px;
+      padding: 0 20px;
+      margin: 0 auto;
+      position: relative;
+      a {
+        color: #694425;
+        text-decoration: none;
+        font-size: 12px;
+      }
+      span {
+        font-size: 10px;
+        margin: 0 20px;
+        padding: 0;
+      }
+    }
+  }
+  .global-box {
+    position: relative;
+    border-radius: 0;
+    min-height: 200px;
+    margin-bottom: 40px;
+    background: #FFF;
+    box-shadow: 0 0 10px 2px rgba(207,196,163,0.3);
+    .container {
+      width: 1088px;
+      padding: 0 20px;
+      margin: 0 auto;
+      height: 250px;
+      .wall {
+        width: 300px;
+        height: 200px;
+        float: left;
+        background-size: cover;
+        padding: 0;
+        a {
+          position: absolute;
+          z-index: 9;
+          display: block;
+          background: rgba(0, 0, 0, 0.7);
+          color: #FFF;
+          text-decoration: none;
+          padding: 5px 10px;
+          font-size: 11px;
+          top: 10px;
+        }
+      }
+      .read {
+        width: 300px;
+        z-index: 8;
+        position: absolute;
+        top: 0;
+        display: block;
+        text-decoration: none;
+        background: rgba(0, 0, 0, 0.2);
+        padding-top: 200px;
+        .inner {
+          background: #df7b00;
+          box-shadow: 2px 2px 4px -2px rgba(0, 0, 0, 0.2);
+          border-radius: 0;
+          width: auto;
+          color: #FFF;
+          text-align: center;
+          color: #FFF;
+          font-size: 14px;
+          height: 40px;
+          line-height: 40px;
+        }
+      }
+      .body {
+        padding-left: 320px;
+        padding-top: 15px;
+        position: relative;
+        color: #694425;
+        height: inherit;
+        .reading_time {
+          font-size: 13px;
+          color: #999;
+        }
+        .tags {
+          height: 66px;
+          padding-top: 4px;
+          overflow: hidden;
+          .announce {
+            border: 1px dotted #DDD;
+            padding-left: 10px;
+            padding-right: 10px;
+            line-height: 22px;
+            padding-top: 1px;
+            color: #aaa;
+            font-size: 12px;
+            display: inline-block;
+            margin-right: 10px;
+            margin-top: 5px;
+            span {
+              font-weight: normal;
+              font-size: 12px;
+              color: #aaa;
+              line-height: 22px;
+              padding: 0;
+            }
+          }
+        }
+        .next_prev_stories {
+          margin-top: 5px;
+          .prev {
+            float: left;
+            text-align: left;
+            width: 49.5%;
+          }
+          .next {
+            float: right;
+            text-align: right;
+            width: 49.5%;
+          }
+        }
+      }
+    }
+  }
+}
+._popIn_recommend_container {
+    width: inherit;
+}
+[data-is="story-id-top"] > .pankuzu a.category {
+  font-weight: bold;
+  position: static;
 }
 
-.contentsss {
-  padding-top: 100px;
+[data-is="story-id-top"] > .global-box > .container > .wall > a.destroy {
+  right: 60px;
+}
+
+
+[data-is="story-id-top"] > .global-box > .container > .body a {
+  display: block;
+  text-decoration: none;
+  color: #694425;
+}
+
+
+[data-is="story-id-top"] > .global-box > .container > .body > a > .title {
+  font-size: 20px;
+  line-height: 30px;
+  padding-bottom: 10px;
+  font-weight: bold;
+  height: 30px;
+  overflow: hidden;
+  padding: 0;
+  color: inherit;
+  letter-spacing: normal;
+}
+
+[data-is="story-id-top"] > .global-box > .container > .body > .action > .social {
+  position: absolute;
+  bottom: -35px;
+  display: inline-block;
+  padding-top: 10px;
+}
+
+[data-is="story-id-top"] > .global-box > .container > .body > .action > .social > .social-box > div {
+  vertical-align: top;
+  display: inline-block;
+  margin-right: 6px;
+}
+
+.fb_iframe_widget {
+  display: inline-block;
+  position: relative;
+  padding: 0
+}
+
+[data-is="story-id-top"] > .global-box > .container > .body > .action > .delivery {
+  text-align: left;
+  opacity: 0.7;
+  width: 1088px;
+  padding: 7px 0;
+  margin: 0 auto;
+  .ui.checkbox {
+    position: relative;
+    display: inline-block;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    outline: none;
+    vertical-align: baseline;
+    font-style: normal;
+    min-height: 17px;
+    font-size: 1rem;
+    line-height: 17px;
+    min-width: 17px;
+    min-height: 1.5rem;
+    .ui.checkbox input {
+      width: 1.5rem;
+      height: 3.5rem;
+    }
+    .ui.checkbox input[type="radio"] {
+      cursor: pointer;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      opacity: 0 !important;
+      outline: none;
+      z-index: 3;
+    }
+  }
+}
+._popIn_recommend_container {
+    width: inherit;
+}
+
+
+.story-add-engagement{
+    margin-top: 20px;
+    padding: 20px;
+    padding-top: 10px;
+    background: #FFF;
 }
