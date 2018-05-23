@@ -27,8 +27,8 @@
         <div class="container">
           <div class="wall" style="background-image: url();">
             <% if user_signed_in? && current_user.id == @story.user_id %>
-             <%= link_to '編集', "/storys/#{@story.id}/edit", method: :get, :style => "right: 115px;"%>
-             <%= link_to '削除', "/storys/#{@story.id}", method: :delete, :style => "right: 65px;" %>
+             <%= link_to '編集', edit_story_path(@story.id), :style => "right: 115px;"%>
+             <%= link_to '削除', story_path(@story.id), method: :delete, :style => "right: 65px;" %>
             <% end %>
           </div>
           <a class="read" href="/story">
@@ -79,21 +79,15 @@
             <div data-is="story-id-bookmark-form" >
               <div class = "inner" >
                <div class="icon"></div>
-                 <% if current_user %>
-                  <%= form_tag("/storys/#{@story.id}/comments", method: :post) do %>
-                    <textarea name = "text"></textarea>
-                    <input type="submit" value="SENT">
-                  <% end %>
-                 <% end %>
+                <%= form_for [@story, @comment] do |f| %>
+                  <%= f.text_field :text, placeholder: "コメントを書いてね！" %>
+                  <%= f.submit "送信"%>
+                <% end %>
              </div>
                 <%= render 'likes/like'%>
                  <div class="comments">
-                  <h2>＜コメント一覧＞</h2>
-                    <% if @comments %>
-                     <% @comments.each do |comment| %>
-                       <p><%= comment.text %></p>
-                     <% end %>
-                    <% end %>
+                   <h2>＜コメント一覧＞</h2>
+                <%= render partial: 'comments', collection: @comments %>
                   </div>
                 <i class = "fa fa-star"> </i>
             </div>
