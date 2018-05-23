@@ -3,11 +3,72 @@
   <%= render 'application/toolbar' %>
   <div class="main">
     <div can_delivery_other="true" data-is="story-id-top" is_me="true">
+      <div class="pankuzu">
+        <div class="container">
+          <a class="to-top" href="/">トップページ</a>
+          <span>></span>
+          <a class="category" href="">カテゴリ名</a>
+        </div>
+      </div>
+      <div class="global-box">
+        <div class="container">
+          <div class="wall" style="background-image: url();">
+            <% @storys.each do |story| %>
+            <%= link_to '削除', "/storys/#{story.id}", method: :delete, :style => "right: 115px;" %>
+            <%= link_to '編集', "/storys/#{story.id}/edit", method: :get, :style => "right: 65px;" %>
+          </div>
+          <a class="read" href="/story">
+            <div class="inner">
+              <i class="fa fa-arrow-right"></i>
+              続きを読む
+            </div>
+          </a>
+          <div class="body">
+            <p class="reading_time">1 min read</p>
+            <a class="linked" href="/story/story_id">
+              <h2 class="title" data-is="print" labal=""><%= story.title %></h2>
+              <div class="discription" style="padding: 0; margin-top: 10px; height: 40px; font-size: 14px; color: #807975;">
+                <%= story.text %>
+              </div>
+            <% end %>
+            </a>
+            <div class="tags">
+              <div class="announce">
+                <i class="fa fa-plus"></i>
+                <span>読者の方もタグを追加できるな機能を実装中です！</span>
+              </div>
+            </div>
+            <div class="next_prev_stories clearfix">
+              <div class="prev">
+                <span>
+                  <i class="fa fa-arrow-left"></i>
+                  前編へ
+                </span>
+              </div>
+              <div class="next"></div>
+              <div class="next">
+                <a href="/story/new?prev_id/">
+                  続編を書く
+                  <i class="fa fa-arrow-pencil"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="contents">
       <div class="contents-container clearfix">
-        <div class="layout-column-main"></div>
-        <div class="layout-column-right"></div>
+        <div class="layout-column-main">
+          <div class="story-add-engagement">
+            <h3 class="h3-global">みんなの読んで良かった！</h3>
+            <div data-is="story-id-bookmark-form" >
+              …</div>
+          </div>
+        </div>
+        <div class="layout-column-right"><h2>bbbbbb</h2>
+        </div>
+
         <%= render 'layouts/recommend' %>
       </div>
     </div>
