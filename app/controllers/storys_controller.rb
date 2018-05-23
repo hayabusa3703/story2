@@ -1,39 +1,41 @@
 class StorysController < ApplicationController
 
   before_action :move_to_index, except: :index
+  before_action :set_story, only: [:index, :new, :create]
+  before_action :story_find, only: [:desroy, :update, :edit]
   RANDOMSTORYS = 4
 
   def index
     @storys = Story.all.page(params[:page]).per(RANDOMSTORYS)
-    @categorys = Category.all
   end
 
   def new
-    @categorys = Category.all
+    @story = Story.new
   end
 
   def create
     Story.create(story_params)
-    @categorys = Category.all
   end
 
   def destroy
-    story = Story.find(params[:id])
     story.destroy
   end
 
   def update
-    story = Story.find(params[:id])
     story.update(story_params)
   end
 
-  def edit
-    @story = Story.find(params[:id])
+  private
+  def set_story
+    @categorys = Category.all
   end
 
-  private
+  def story_find
+    story = Story.find(params[:id])
+  end
+
   def story_params
-    params.permit(:title, :category_id, :text).merge(user_id: current_user.id)
+    params.require(:story).permit(:title, :category_id, :text).merge(user_id: current_user.id)
   end
 
   def move_to_index
