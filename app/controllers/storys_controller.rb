@@ -1,5 +1,5 @@
 class StorysController < ApplicationController
-  before_action :set_story, except: [:index,:new, :create, :update]
+  before_action :set_story, except: [:index, :new, :create, :update]
   before_action :move_to_index, except: [:index, :show]
 
   def index

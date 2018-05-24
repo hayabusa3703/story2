@@ -27,8 +27,8 @@
         <div class="container">
           <div class="wall" style="background-image: url();">
             <% if user_signed_in? && current_user.id == @story.user_id %>
-             <%= link_to '編集', edit_story_path(@story.id), :style => "right: 115px;"%>
-             <%= link_to '削除', story_path(@story.id), method: :delete, :style => "right: 65px;" %>
+             <%= link_to '編集', edit_story_path(@story), :style => "right: 115px;"%>
+             <%= link_to '削除', story_path(@story), method: :delete, :style => "right: 65px;" %>
             <% end %>
           </div>
           <a class="read" href="/story"><!-- 未実装の機能のため今後リンク先を追加する予定です。-->
