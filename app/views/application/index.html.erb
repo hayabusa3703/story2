@@ -4,9 +4,9 @@
   <div class="main">
     <div data-is="page-index">
       <a class="katarie-image" href="">     <!-- まだ未完成の機能なのでaタグのままにしています-->
-        <img class="yoshimoto-logo" src="https://storys.jp/images/tieup/katarie/yoshimoto_logo.png">
-        <img class="katarie-logo" src="https://storys.jp/images/tieup/katarie/katarie2_big_bnr_logo.png">
-        <img class="storys-logo" src="https://storys.jp/images/layouts/logo-white.png">
+        <%= image_tag "https://storys.jp/images/tieup/katarie/yoshimoto_logo.png", class: "yoshimoto-logo" %>
+        <%= image_tag "https://storys.jp/images/tieup/katarie/katarie2_big_bnr_logo.png", class: "katarie-logo" %>
+        <%= image_tag "https://storys.jp/images/layouts/logo-white.png", class: "storys-logo" %>
         <p>大賞発表</p>
       </a>
     </div>
@@ -30,7 +30,7 @@
       <div class="contents-container clearfix">
         <div class="layout-column-main">
           <div class="story-list clearfix">
-            <%= render 'application/story-box' %>
+            <%= render partial: "application/story-box", collection: @storys, as:"story" %>
           </div>
         </div>
         <div class="layout-column-right">
