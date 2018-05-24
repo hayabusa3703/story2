@@ -1,11 +1,10 @@
-<% @storys.each do |story| %>
   <div class="story-box">
     <span class="name"></span>
-  <a class="wall" href="/story/1925/comments" style="background-image: url(https://img.sty.fun/t/uploads/user/wall/5126/cc0ee168.jpeg);"></a>
+    <%= link_to(story_path(story), class: 'wall', style: "background-image: url(https://img.sty.fun/t/uploads/user/wall/5126/cc0ee168.jpeg);") do %><% end %>
   <div class="category">
     <a data-is="print" class="category__label study category__label__after" href="/category/120" label="勉強">勉強</a>
   </div>
-  <a class="wrapper" href="/story/1925/comments">
+    <%= link_to(story_path(story), class: 'wrapper') do %>
     <div class="top clearfix">
       <div class="left">
         <div class="left img" style="background-image: url(https://graph.facebook.com/727353672/picture?width=400&amp;height=400);"></div>
@@ -36,7 +35,7 @@
             <img src="">
           </div>
           <div class="text">
-            <div class="num" data-is="print" label="○○人の">○○人の</div>
+            <div class="num" data-is="print" label="○○人の"><%= story.likes_count %>人の</div>
             <div class="sub_text">読んでよかった！！</div>
           </div>
         </div>
@@ -52,7 +51,6 @@
         </div>
       </div>
     </div>
-  </a>
+    <% end %>
   </div>
-<% end %>
 

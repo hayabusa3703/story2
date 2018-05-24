@@ -1,8 +1,14 @@
 class StorysController < ApplicationController
-  before_action :move_to_index, except: :index
+  before_action :set_story, only: [:show, :edit]
+  before_action :move_to_index, except: [:index]
 
   def index
     @storys = Story.all.page(params[:page]).per(1).order('created_at DESC')
+  end
+
+   def show
+    @comments = @story.comments.includes(:user)
+    @comment = Comment.new
   end
 
   def new
@@ -27,7 +33,6 @@ class StorysController < ApplicationController
   end
 
   def edit
-    @story = Story.find(params[:id])
   end
 
   private
@@ -37,5 +42,9 @@ class StorysController < ApplicationController
 
   def move_to_index
     redirect_to action: :index unless user_signed_in?
+  end
+
+  def set_story
+    @story = Story.find(params[:id])
   end
 end

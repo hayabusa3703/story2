@@ -33,10 +33,10 @@
       </div>
       <div class="global-box">
         <div class="container">
-          <div class="wall" style="background-image: url();">
+          <div class="wall">
             <% @storys.each do |story| %>
-            <%= link_to '削除', "/storys/#{story.id}", method: :delete, :style => "right: 115px;" %>
-            <%= link_to '編集', "/storys/#{story.id}/edit", method: :get, :style => "right: 65px;" %>
+              <%= link_to '削除', story_path(story), method: :delete, class: 'story__delete' %>
+              <%= link_to '編集', edit_story_path(story), class: 'story__edit' %>
           </div>
           <a class="read" href="/story">
             <div class="inner">
@@ -85,11 +85,15 @@
           <div class="story-add-engagement">
             <h3 class="h3-global">みんなの読んで良かった！</h3>
             <div data-is="story-id-bookmark-form" >
-              …</div>
+              <div class = "inner" >
+               <div class="icon"></div>
+               <textarea>読んで良かったにコメントを添える...</textarea>
+              </div>
+                <i class = "fa fa-star"> </i>
+           </div>
           </div>
         </div>
-        <div class="layout-column-right"><h2>bbbbbb</h2>  <%= render 'likes/like'%></div>
-
+        <div class="layout-column-right"><h2>bbbbbb</h2></div>
         <%= render 'layouts/recommend'%>
       </div>
     </div>
