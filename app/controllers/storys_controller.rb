@@ -2,11 +2,11 @@ class StorysController < ApplicationController
 
   before_action :move_to_index, except: :index
   before_action :set_story, only: [:index, :new, :create]
-  before_action :story_find, only: [:desroy, :edit, :update]
-  RANDOMSTORYS = 4
+  before_action :story_find, only: [:destroy, :edit, :update]
+  CURRENTSTORYS = 1
 
   def index
-    @storys = Story.all.page(params[:page]).per(RANDOMSTORYS)
+    @storys = Story.all.page(params[:page]).per(CURRENTSTORYS).order('created_at DESC')
   end
 
   def new
@@ -19,7 +19,7 @@ class StorysController < ApplicationController
   end
 
   def destroy
-    story.destroy
+    @story.destroy
   end
 
   def edit
