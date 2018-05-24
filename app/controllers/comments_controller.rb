@@ -1,9 +1,13 @@
 class CommentsController < ApplicationController
+
   def create
     @story = Story.find(params[:story_id])
     @comment = @story.comments.build(comment_params)
-    @comment.save
-    redirect_to story_path(params[:story_id])
+    if @comment.save
+      redirect_to story_path(params[:story_id])
+    else
+      render :index
+    end
   end
 
   private

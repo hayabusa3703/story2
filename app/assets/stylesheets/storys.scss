@@ -263,3 +263,14 @@
     position: relative;
     padding-left: 15px;
 }
+
+.story{
+
+  &__delete{
+    right: 115px;
+  }
+
+  &__edit{
+    right: 65px;
+  }
+}
