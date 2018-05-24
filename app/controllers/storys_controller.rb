@@ -1,6 +1,6 @@
 class StorysController < ApplicationController
-  before_action :set_story, except: [:index, :new, :create, :update]
-  before_action :move_to_index, except: [:index, :show]
+  before_action :set_story, only: [:show, :edit]
+  before_action :move_to_index, except: [:index]
 
   def index
     @storys = Story.all.page(params[:page]).per(1).order('created_at DESC')
