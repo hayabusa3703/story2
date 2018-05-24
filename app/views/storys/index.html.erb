@@ -1,13 +1,13 @@
-<%= render 'application/titlebar' %>
+<%= render 'application/titlebar'%>
 <div class="container">
-  <%= render 'application/toolbar' %>
+  <%= render 'application/toolbar'%>
   <div class="main">
     <div can_delivery_other="true" data-is="story-id-top" is_me="true">
       <div class="pankuzu">
         <div class="container">
-          <a class="to-top" href="/">トップページ</a>
-          <span>></span>
-          <a class="category" href="">カテゴリ名</a>
+          <a class="to-top" href="/">トップページ</a>    <!-- まだ実装中の機能であるのでaタグのままにしています-->
+          <span></span>
+          <a class="category" href="">カテゴリ名</a>     <!-- まだ実装中の機能であるのでaタグのままにしています-->
         </div>
       </div>
       <div class="global-box">
@@ -17,7 +17,7 @@
             <%= link_to '削除', "/storys/#{story.id}", method: :delete, :style => "right: 115px;" %>
             <%= link_to '編集', "/storys/#{story.id}/edit", method: :get, :style => "right: 65px;" %>
           </div>
-          <a class="read" href="/story">
+          <a class="read" href="/">       <!-- まだ実装中の機能であるのでaタグのままにしています-->
             <div class="inner">
               <i class="fa fa-arrow-right"></i>
               続きを読む
@@ -25,7 +25,7 @@
           </a>
           <div class="body">
             <p class="reading_time">1 min read</p>
-            <a class="linked" href="/story/story_id">
+            <a class="linked" href="/story/story_id">       <!-- まだ実装中の機能であるのでaタグのままにしています-->
               <h2 class="title" data-is="print" labal=""><%= story.title %></h2>
               <div class="discription" style="padding: 0; margin-top: 10px; height: 40px; font-size: 14px; color: #807975;">
                 <%= story.text %>
@@ -47,7 +47,7 @@
               </div>
               <div class="next"></div>
               <div class="next">
-                <a href="/story/new?prev_id/">
+                <a href="/">             <!-- まだ実装中の機能であるのでaタグのままにしています-->
                   続編を書く
                   <i class="fa fa-arrow-pencil"></i>
                 </a>
@@ -66,12 +66,12 @@
               …</div>
           </div>
         </div>
-        <div class="layout-column-right"><h2>bbbbbb</h2>
-        </div>
+        <div class="layout-column-right"><h2>bbbbbb</h2></div>
 
-        <%= render 'layouts/recommend' %>
+        <%= render 'layouts/recommend'%>
       </div>
     </div>
     <%= render 'application/footer' %>
   </div>
 </div>
+
