@@ -1,0 +1,102 @@
+<div class="topbarwrapper">
+  <%= render 'application/titlebar'%>
+  <div data-is="categorybar-wrapper">
+    <div class="categorybar">
+      <div class="category-container">
+        <div class="menu">
+          <%= link_to(root_path, class: 'category__bg__after top')do %><span data-is="print" label="TOP">TOP</span><% end %>
+          <%= link_to(latest_path, class: 'category__bg__after top')do %><span data-is="print" label="新着">新着</span><% end %>
+          <%= link_to(legend_path, class: 'category__bg__after legend')do %><span data-is="print" label="殿堂入り">殿堂入り</span><% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <%= render 'application/toolbar'%>
+  <div class="main">
+    <div can_delivery_other="true" data-is="story-id-top" is_me="true">
+      <div class="pankuzu">
+        <div class="container">
+          <a class="to-top" href="/">トップページ</a><!-- 未実装の機能のため今後リンク先を追加する予定です。-->
+          <span>></span>
+          <a class="category" href="">カテゴリ名</a><!-- 未実装の機能のため今後リンク先を追加する予定です。-->
+        </div>
+      </div>
+      <div class="global-box">
+        <div class="container">
+          <div class="wall" style="background-image: url();">
+            <% if user_signed_in? && current_user.id == @story.user_id %>
+             <%= link_to '編集', edit_story_path(@story), :style => "right: 115px;"%>
+             <%= link_to '削除', story_path(@story), method: :delete, :style => "right: 65px;" %>
+            <% end %>
+          </div>
+          <a class="read" href="/story"><!-- 未実装の機能のため今後リンク先を追加する予定です。-->
+            <div class="inner">
+              <i class="fa fa-arrow-right"></i>
+              続きを読む
+            </div>
+          </a>
+          <div class="body">
+            <p class="reading_time">1 min read</p>
+            <a class="linked" href="/story/story_id"><!-- 未実装の機能のため今後リンク先を追加する予定です。-->
+              <h2 class="title" data-is="print" labal=""><%= @story.title %></h2>
+              <div class="discription" style="padding: 0; margin-top: 10px; height: 40px; font-size: 14px; color: #807975;">
+                <%= @story.text %>
+              </div>
+            </a>
+            <div class="tags">
+              <div class="announce">
+                <i class="fa fa-plus"></i>
+                 <span>読者の方もタグを追加できるな機能を実装中です！</span>
+              </div>
+            </div>
+            <div class="next_prev_stories clearfix">
+              <div class="prev">
+                <span>
+                  <i class="fa fa-arrow-left"></i>
+                  前編へ
+                </span>
+              </div>
+              <div class="next"></div>
+              <div class="next">
+                <a href="/story/new?prev_id/"><!-- 未実装の機能のため今後リンク先を追加する予定です。-->
+                  続編を書く
+                  <i class="fa fa-arrow-pencil"></i>
+                </a>
+              </div>
+            </div>
+            <%= render '/storys/social'%>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="contents">
+      <div class="contents-container clearfix">
+        <div class="layout-column-main">
+          <div class="story-add-engagement">
+            <h3 class="h3-global">みんなの読んで良かった！</h3>
+            <div data-is="story-id-bookmark-form" >
+              <div class = "inner" >
+               <div class="icon"></div>
+                <%= form_for [@story, @comment] do |f| %>
+                  <%= f.text_field :text, placeholder: "コメントを書いてね！" %>
+                  <%= f.submit "送信"%>
+                <% end %>
+             </div>
+                <%= render 'likes/like'%>
+                 <div class="comments">
+                   <h2>＜コメント一覧＞</h2>
+                <%= render partial: 'comments', collection: @comments %>
+                  </div>
+                <i class = "fa fa-star"> </i>
+            </div>
+          </div>
+        </div>
+        <div class="layout-column-right"></div>
+        <%= render 'layouts/recommend'%>
+      </div>
+    </div>
+    <%= render 'application/footer' %>
+  </div>
+</div>
