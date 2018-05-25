@@ -1,2 +1,31 @@
-<h1>hello</h1>
-<!-- <p>Find me in app/views/home/index.html.erb</p> -->
+<div class="topbarwrapper">
+  <%= render 'application/titlebar'%>
+  <div data-is="categorybar-wrapper">
+    <div class="categorybar">
+      <div class="category-container">
+        <div class="menu">
+          <%= link_to(root_path, class: 'category__bg__after top')do %><span data-is="print" label="TOP">TOP</span><% end %>
+          <%= link_to(latest_path, class: 'category__bg__after top')do %><span data-is="print" label="新着">新着</span><% end %>
+          <%= link_to(legend_path, class: 'category__bg__after legend')do %><span data-is="print" label="殿堂入り">殿堂入り</span><% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container-latest">
+  <%= render 'application/toolbar'%>
+  <div class="main">
+    <div class="contents">
+      <div class="contents-container clearfix">
+        <div class="layout-column-main">
+          <div class="story-list clearfix">
+            <!-- ストーリーボックスの中身 -->
+            <%= render partial: 'home/story-box', collection: @storys, as: "story" %>
+            <!-- ストーリーボックスの中身 -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <%= render 'application/footer' %>
+  </div>
+</div>

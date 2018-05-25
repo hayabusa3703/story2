@@ -20,4 +20,5 @@ Rails.application.routes.draw do
   get  'newest' => 'newest#index'
   get 'latest' => 'latest#index'
   get 'legend' => 'legend#index'
+  get 'home' => 'home#index'
 end
