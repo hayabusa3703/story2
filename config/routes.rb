@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root 'application#index'
   resources :storys do
+    resources :comments, only: [:create]
     resources :likes, only: [:create, :destroy]
     resources :new, only: [:index, :new]
     member do
@@ -10,7 +11,6 @@ Rails.application.routes.draw do
       patch :update
     end
   end
-
   resources :categorys , only: [:index, :show] do
     member do
       get :newest
@@ -20,4 +20,6 @@ Rails.application.routes.draw do
   resources :storys, only: [:edit, :update, :new, :create]
   resources :latest, only: [:index]
   resources :legend, only: [:index]
+
+  # resources :users, only: [:show]  機能確認しよう！
 end

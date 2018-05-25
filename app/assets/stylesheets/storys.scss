@@ -40,6 +40,7 @@
         float: left;
         background-size: cover;
         padding: 0;
+        background-image: url();
         a {
           position: absolute;
           z-index: 9;
@@ -220,4 +221,56 @@
     padding: 20px;
     padding-top: 10px;
     background: #FFF;
+}
+
+[data-is="story-id-bookmark-form"] {
+
+
+}
+
+[data-is="story-id-bookmark-form"] > .inner {
+    text-align: center;
+    padding-left: 60px;
+    position: relative;
+}
+
+[data-is="story-id-bookmark-form"] > .inner > .icon{
+    position: absolute;
+    left: 0px;
+    top: 0;
+    width: 40px;
+    height: 40px;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 50%;
+    background-image: url('gokuuda.jpeg');
+}
+
+[data-is="story-id-bookmark-form"] > .inner > textarea{
+    background: #E8E3CE;
+    color: #a3988d;
+    border-radius: 5px;
+    padding: 10px;
+    border: none;
+    font-size: 14px;
+    width: 410px;
+    display: block;
+    margin: 0 auto 10px;
+    height: 41px;
+    max-width: 100%;
+    outline: none;
+    float: left;
+    position: relative;
+    padding-left: 15px;
+}
+
+.story{
+
+  &__delete{
+    right: 115px;
+  }
+
+  &__edit{
+    right: 65px;
+  }
 }
