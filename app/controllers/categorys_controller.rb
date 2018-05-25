@@ -17,12 +17,4 @@ class CategorysController < ApplicationController
     def set_sort
       @storys = Story.where(category_id: params[:id])
     end
-
-    def story_params
-      params.permit(:title, :category_id, :text).merge(user_id: current_user.id)
-    end
-
-    def move_to_index
-      redirect_to action: :index unless user_signed_in?
-    end
 end
