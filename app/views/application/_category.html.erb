@@ -11,101 +11,19 @@
       </div>
     </div>
   </div>
+
+<% @categorys.each do |category| %>
   <div category_name="恋愛" category_slug="love" data-is="pages-index-bottom-category">
     <div class="inner">
       <div class="ajax-container">
-        <h1>恋愛のストーリー</h1>
+        <h1><%= category.name %>のストーリー</h1>
         <div class="story-list clearfix">
           <%= render 'application/genre_story-box'%>
         </div>
-          <%= link_to "#{ @categorys.name }のストーリー一欄", category_path(@categorys), class: "catebtn" %>
+          <%= link_to "#{ category.name }のストーリー一欄", category_path(category), class: "catebtn" %>
           <i class="fa-arrow-circle-right fa"></i>
       </div>
     </div>
   </div>
-  <div category_name="結婚" category_slug="marry" data-is="pages-index-bottom-category">
-    <div class="inner">
-      <div class="ajax-container">
-        <h1>結婚のストーリー</h1>
-        <div class="story-list clearfix">
-          <%= render 'application/genre_story-box' %>
-
-        </div>
-          <%= link_to "#{ @categorys.name }のストーリー一欄", category_path(@categorys), class: "catebtn" %>
-          <i class="fa-arrow-circle-right fa"></i>
-      </div>
-    </div>
-  </div>
-  <div category_name="勉強" category_slug="study" data-is="pages-index-bottom-category">
-    <div class="inner">
-      <div class="ajax-container">
-        <h1>勉強のストーリー</h1>
-        <div class="story-list clearfix">
-          <%= render 'application/genre_story-box' %>
-        </div>
-          <%= link_to "#{ @categorys.name }のストーリー一欄", category_path(@categorys), class: "catebtn" %>
-          <i class="fa-arrow-circle-right fa"></i>
-      </div>
-    </div>
-  </div>
-  <div category_name="仕事" category_slug="work" data-is="pages-index-bottom-category">
-    <div class="inner">
-      <div class="ajax-container">
-        <h1>仕事のストーリー</h1>
-        <div class="story-list clearfix">
-          <%= render 'application/genre_story-box' %>
-        </div>
-          <%= link_to "#{ @categorys.name }のストーリー一欄", category_path(@categorys), class: "catebtn" %>
-          <i class="fa-arrow-circle-right fa"></i>
-      </div>
-    </div>
-  </div>
-  <div category_name="新生活" category_slug="newlife" data-is="pages-index-bottom-category">
-    <div class="inner">
-      <div class="ajax-container">
-        <h1>新生活のストーリー</h1>
-        <div class="story-list clearfix">
-          <%= render 'application/genre_story-box' %>
-        </div>
-        <%= link_to "#{ @categorys.name }のストーリー一欄", category_path(@categorys), class: "catebtn" %>
-          <i class="fa-arrow-circle-right fa"></i>
-      </div>
-    </div>
-  </div>
-  <div category_name="旅行" category_slug="trip" data-is="pages-index-bottom-category">
-    <div class="inner">
-      <div class="ajax-container">
-        <h1>旅行のストーリー</h1>
-        <div class="story-list clearfix">
-          <%= render 'application/genre_story-box' %>
-        </div>
-          <%= link_to "#{ @categorys.name }のストーリー一欄", category_path(@categorys), class: "catebtn" %>
-          <i class="fa-arrow-circle-right fa"></i>
-      </div>
-    </div>
-  </div>
-  <div category_name="病気" category_slug="sick" data-is="pages-index-bottom-category">
-    <div class="inner">
-      <div class="ajax-container">
-        <h1>病気のストーリー</h1>
-        <div class="story-list clearfix">
-          <%= render 'application/genre_story-box' %>
-        </div>
-        <%= link_to "#{ @categorys.name }のストーリー一欄", category_path(@categorys), class: "catebtn" %>
-          <i class="fa-arrow-circle-right fa"></i>
-      </div>
-    </div>
-  </div>
-  <div category_name="日常生活" category_slug="daily" data-is="pages-index-bottom-category">
-    <div class="inner">
-      <div class="ajax-container">
-        <h1>日常生活のストーリー</h1>
-        <div class="story-list clearfix">
-          <%= render 'application/genre_story-box' %>
-        </div>
-          <%= link_to "#{ @categorys.name }のストーリー一欄", category_path(@categorys), class: "catebtn" %>
-          <i class="fa-arrow-circle-right fa"></i>
-      </div>
-    </div>
-  </div>
+<% end %>
 </div>
