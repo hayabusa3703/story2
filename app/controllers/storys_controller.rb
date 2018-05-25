@@ -10,11 +10,11 @@ class StorysController < ApplicationController
   end
 
   def new
-    @story = Story.new
+    @story = current_user.stories.build
   end
 
   def create
-    @story = Story.new(story_params)
+    @story = current_user.stories.build(story_params)
     @story.save
   end
 
@@ -39,7 +39,7 @@ class StorysController < ApplicationController
   end
 
   def story_params
-    params.require(:story).permit(:title, :category_id, :text).merge(user_id: current_user.id)
+    params.require(:story).permit(:title, :category_id, :text)
   end
 
   def move_to_index
