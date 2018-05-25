@@ -1,31 +1,47 @@
-<div data-is="titlebar-wrapper">
-  <div class="titlebar">
-    <div class="titlebar-container">
-      <div class="left">
-        <div class="header-search">
-          <form>
-            <div class="search-wrapper">
-              <button class="search-btn" type="submit">
-                <i class="fa fa-search"></i>
-              </button>
-              <input class="input-search" type="text" name="q" placeholder="ストーリーを検索...">
+<div class="topbarwrapper">
+  <div data-is="titlebar-wrapper">
+    <div class="titlebar">
+      <div class="titlebar-container">
+        <div class="left">
+          <div class="header-search">
+            <form>
+              <div class="search-wrapper">
+                <button class="search-btn" type="submit">
+                  <i class="fa fa-search"></i>
+                </button>
+                <input class="input-search" type="text" name="q" placeholder="ストーリーを検索...">
+              </div>
+            </form>
+          </div>
+        </div>
+        <a class="logo" href="/">
+          <%= image_tag "https://storys.jp/images/layouts/logo-white.png", class: "logo-image", alt: "storys.jp" %>
+        </a>
+        <div class="right">
+          <div class="header-menu">
+            <div class="inner clearfix">
+              <div class="dropdown">
+                <%= image_tag "https://img.sty.fun/t/uploads/user/second_image/173010/d760dce0.jpeg?ds=s&amp;of=jpg&amp;dw=40&amp;dh=40&amp;da=s&amp;cw=40&amp;ch=40", class: "people-img" %>
+              </div>
+              <a class="name" href="">
+                <span data-is="print" label="yoshimitsu eagashira">yoshimitsuegashira</span>
+              </a>
             </div>
-          </form>
+          </div>
         </div>
       </div>
-      <a class="logo" href="/">
-        <img class="logo-image" src="https://storys.jp/images/layouts/logo-white.png" alt="storys.jp">
-      </a>
-      <div class="right">
-        <div class="header-menu">
-          <div class="inner clearfix">
-            <div class="dropdown">
-              <img class="people-img" src="https://img.sty.fun/t/uploads/user/second_image/173010/d760dce0.jpeg?ds=s&amp;of=jpg&amp;dw=40&amp;dh=40&amp;da=s&amp;cw=40&amp;ch=40">
-            </div>
-            <a class="name" href="">
-              <span data-is="print" label="yoshimitsu eagashira">yoshimitsuegashira</span>
-            </a>
-          </div>
+    </div>
+  </div>
+  <div data-is="categorybar-wrapper">
+    <div class="categorybar">
+      <div class="category-container">
+        <div class="menu">
+          <a class=" category__bg__after top" href="/"><span data-is="print" label="TOP">TOP</span></a>
+          <a class=" category__bg__after latest" href="/latest"><span data-is="print" label="新着">新着</span></a>
+          <a class=" category__bg__after legend" href="/legend"><span data-is="print" label="殿堂入り">殿堂入り</span></a>
+          <% @categorys.each do |category| %>
+            <%= link_to category.name, category_path(category), class:"category__bg__after categories" %>
+          <% end %>
         </div>
       </div>
     </div>

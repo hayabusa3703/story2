@@ -2,14 +2,25 @@ Rails.application.routes.draw do
   devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root 'application#index'
-    resources :storys do
-      resources :likes, only: [:create, :destroy]
+  resources :storys do
+    resources :comments, only: [:create]
+    resources :likes, only: [:create, :destroy]
+    resources :new, only: [:index, :new]
+    member do
+      delete :destroy
+      patch :update
     end
+  end
+  resources :categorys , only: [:index, :show] do
+    member do
+      get :newest
+    end
+  end
+  
+  resources :storys, only: [:edit, :update, :new, :create]
+  resources :latest, only: [:index]
+  resources :legend, only: [:index]
 
-    resources :storys do
-      resources :comments, only: [:create]
-    end
-    resources :users, only: [:show]
 
   get   'storys'  =>  'storys#index'
   get   'storys/new'  =>  'storys#new'
@@ -21,4 +32,5 @@ Rails.application.routes.draw do
   get 'latest' => 'latest#index'
   get 'legend' => 'legend#index'
   get 'home' => 'home#index'
+  # resources :users, only: [:show]  機能確認しよう！
 end

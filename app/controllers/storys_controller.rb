@@ -1,9 +1,18 @@
 class StorysController < ApplicationController
+
+  before_action :move_to_index, except: :index
   before_action :set_story, only: [:show, :edit]
-  before_action :move_to_index, except: [:index]
+  before_action :set_category, only: [:index, :new, :create]
+  before_action :story_find, only: [:destroy, :edit, :update]
+  CURRENTSTORYS = 1
 
   def index
-    @storys = Story.all.page(params[:page]).per(1).order('created_at DESC')
+    @storys = Story.all.page(params[:page]).per(CURRENTSTORYS).order('created_at DESC')
+  end
+
+   def show
+    @comments = @story.comments.includes(:user)
+    @comment = Comment.new
   end
 
    def show
@@ -12,32 +21,36 @@ class StorysController < ApplicationController
   end
 
   def new
+    @story = current_user.stories.build
   end
 
   def create
-    @story = Story.new(story_params)
+    @story = current_user.stories.build(story_params)
     @story.save
   end
 
   def destroy
-    story = Story.find(params[:id])
-    story.destroy
-  end
-
-  def update
-    @story = Story.find_by(id: params[:id])
-    @story.title = params[:title]
-    @story.text = params[:text]
-    @story.save
-    redirect_to("/storys")
+    @story.destroy
   end
 
   def edit
   end
 
+  def update
+    @story = Story.update(story_params)
+  end
+
   private
+  def set_category
+    @categorys = Category.all
+  end
+
+  def story_find
+    @story = Story.find(params[:id])
+  end
+
   def story_params
-    params.permit(:title, :category_id, :text).merge(user_id: current_user.id)
+    params.require(:story).permit(:title, :category_id, :text)
   end
 
   def move_to_index
