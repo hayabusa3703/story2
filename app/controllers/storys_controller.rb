@@ -15,6 +15,11 @@ class StorysController < ApplicationController
     @comment = Comment.new
   end
 
+   def show
+    @comments = @story.comments.includes(:user)
+    @comment = Comment.new
+  end
+
   def new
     @story = current_user.stories.build
   end
@@ -34,7 +39,6 @@ class StorysController < ApplicationController
   def update
     @story = Story.update(story_params)
   end
-
 
   private
   def set_category

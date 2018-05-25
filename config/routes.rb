@@ -16,7 +16,7 @@ Rails.application.routes.draw do
       get :newest
     end
   end
-
+  
   resources :storys, only: [:edit, :update, :new, :create]
   resources :latest, only: [:index]
   resources :legend, only: [:index]
