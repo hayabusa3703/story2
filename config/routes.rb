@@ -21,5 +21,16 @@ Rails.application.routes.draw do
   resources :latest, only: [:index]
   resources :legend, only: [:index]
 
+
+  get   'storys'  =>  'storys#index'
+  get   'storys/new'  =>  'storys#new'
+  post  'storys'      =>  'storys#create'
+  delete 'storys/:id' =>  'storys#destroy'
+  patch  'storys/:id' => 'storys#update'
+  get  'storys/:id/edit' => 'storys#edit'
+  get  'newest' => 'newest#index'
+  get 'latest' => 'latest#index'
+  get 'legend' => 'legend#index'
+  get 'home' => 'home#index'
   # resources :users, only: [:show]  機能確認しよう！
 end
