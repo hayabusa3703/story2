@@ -213,9 +213,22 @@ form {
   font-weight: normal;
 }
 
+.category__bg__after.categories {
+  white-space: nowrap;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 12px;
+  border-radius: 5px;
+  height: 22px;
+  line-height: 22px;
+  padding: 0 14px;
+  margin-right: 5px;
+  color: #FFF;
+  font-weight: normal;
+}
+
 /*container*/
 .container {
-  height: 100vh;
 }
 
 /*side*/
@@ -280,8 +293,7 @@ form {
   padding: 10px 20px;
   color: #333;
   font-size: 13px;
-  line-height: 22px;
-  overflow: hidden;
+  line-height: 25px;
 }
 
 .menus {
@@ -304,7 +316,7 @@ i {
   display: inline-block;
   background-repeat: no-repeat;
   background-position-y: 5px;
-  background-image: url();
+  background-image: url(/images/layouts/arrow.png);
 }
 
 [data-is="button-grd"] {
@@ -338,16 +350,16 @@ i {
   display: inline-block;
   background-repeat: no-repeat;
   background-position-y: 5px;
-  background-image: url();
+  background-image: url(/images/layouts/arrow.png);
 }
 
-span {
+/*span {
   color: #3c1d00;
   font-weight: bold;
   display: inline-block;
   padding-left: 10px;
   font-size: 16px;
-}
+}*/
 .story-discription {
   font-size: 14px;
   color: #666;
@@ -479,7 +491,7 @@ span {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  margin: -3px auto 20px;
+  margin: 66px auto 20px;
   background-image: url(https://storys.jp/images/tieup/katarie/katarie_vol2_bnr_bg.png);
 }
 
@@ -564,7 +576,7 @@ form {
   color: #e88e00;
 }
 
-#transmission__button {
+button {
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   border: none;
@@ -835,7 +847,8 @@ h4 {
 
 .ajax-index-category {}
 
-.inner {}
+.inner {
+}
 
 .ajax-container {
   position: relative;
@@ -860,7 +873,7 @@ h4 {
     background: rgba(255, 255, 255, 0.4);
 }
 
-[data-is="pages-index-bottom-category"] > .inner > .ajax-container > a {
+[data-is="pages-index-bottom-category"] > .inner > .ajax-container > .catebtn {
   width: 220px;
   height: 30px;
   box-sizing: border-box;
@@ -876,7 +889,7 @@ h4 {
   background: #FFF -webkit-linear-gradient(left, #FF8300, #FFA900);
 }
 
-[data-is="pages-index-bottom-category"] .inner > .ajax-container > a > i {
+[data-is="pages-index-bottom-category"] .inner > .ajax-container > .catebtn > i {
   font-size: 16px;
   position: absolute;
   top: 6px;
@@ -915,7 +928,7 @@ h4 {
 }
 
 .footer_arrow {
-  background-image: url();
+  background-image: url(/images/layouts/arrow.png);
   background-size: contain;
   background-repeat: no-repeat;
   height: 8px;
@@ -960,4 +973,25 @@ vertical-align: middle;
 .footer-copyright a {
   text-decoration: none;
   color: #8a7b68;
+}
+
+.textarea {
+  height: 300px;
+}
+
+.category__label.love.category__label__after {
+  display: block;
+  color: #FFF;
+  font-weight: bold;
+  font-size: 12px;
+  padding: 5px 0;
+  text-decoration: none;
+  width: 75px;
+  text-align: center;
+  box-shadow: 0 1px 3px 0px rgba(1, 1, 1, 0.4);
+  border-radius: 2px 2px 2px 0;
+}
+
+.contentsss {
+  padding-top: 100px;
 }

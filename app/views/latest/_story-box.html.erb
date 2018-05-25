@@ -1,29 +1,29 @@
-  <div class="story-box">
-    <span class="name"></span>
-    <%= link_to(story_path(story), class: 'wall', style: "background-image: url(https://img.sty.fun/t/uploads/user/wall/5126/cc0ee168.jpeg);") do %><% end %>
-  <div class="category">
-    <a data-is="print" class="category__label study category__label__after" href="/category/120" label="勉強">勉強</a>
-  </div>
-    <%= link_to(story_path(story), class: 'wrapper') do %>
-    <div class="top clearfix">
-      <div class="left">
-        <div class="left img" style="background-image: url(https://graph.facebook.com/727353672/picture?width=400&amp;height=400);"></div>
-      </div>
-      <div class="right-area">
-        <div class="right-user">
-          <div class="story-name" data-is="print" label="稲葉　ともみ">稲葉　ともみ</div>
-        </div>
-        <div class="reading-time">4 min read</div>
-        <div class="right-area clearfix"></div>
-        <h3 class="topic">
-          <span><p><%= story.title %></p></span>
-        </h3>
-      </div>
+<div class="story-box">
+  <span class="name"></span>
+  <%= link_to(story_path(story), class: 'wall', style: "background-image: url(https://img.sty.fun/t/uploads/user/wall/5126/cc0ee168.jpeg);") do %>
+  <% end %>
+<div class="category">
+  <a data-is="print" class="category__label study category__label__after" href="/category/120" label="勉強">勉強</a>
+</div>
+  <%= link_to(story_path(story), class: 'wrapper') do %>
+  <div class="top clearfix">
+    <div class="left">
+      <div class="left img" style="background-image: url(https://graph.facebook.com/727353672/picture?width=400&amp;height=400);"></div>
     </div>
-    <div class="story-discription">
-      <div class="etc-reader">
-        <p><%= story.text %></p>
+    <div class="right-area">
+      <div class="right-user">
+        <div class="story-name" data-is="print" label="稲葉　ともみ">稲葉　ともみ</div>
       </div>
+      <div class="reading-time">4 min read</div>
+      <div class="right-area clearfix"></div>
+      <h3 class="topic">
+        <span><p><%= story.title %></p></span>
+      </h3>
+    </div>
+  </div>
+  <div class="story-discription">
+    <div class="etc-reader">
+      <p><%= story.text %></p>
     </div>
     <div>
       <div data-is="story-box-users" bookmark_counter="22">
@@ -40,17 +40,17 @@
           </div>
         </div>
       </div>
-      <div data-is="story-box-comment">
-        <div class="users-wrapper clearfix">
-          <div class="left">
-            <div class="img" style="background-image: url(https://graph.facebook.com/100002151358967/picture?width=400&amp;height=400);" title="内藤 涼子"></div>
-          </div>
-          <div class="body">
-            <div class="inner" data-is="print" label=""></div>
-          </div>
+    </div>
+    <div data-is="story-box-comment">
+      <div class="users-wrapper clearfix">
+        <div class="left">
+          <div class="img" style="background-image: url(https://graph.facebook.com/100002151358967/picture?width=400&amp;height=400);" title="内藤 涼子"></div>
+        </div>
+        <div class="body">
+          <div class="inner" data-is="print" label=""></div>
         </div>
       </div>
     </div>
-    <% end %>
   </div>
-
+  <% end %>
+</div>

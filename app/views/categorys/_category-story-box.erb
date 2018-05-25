@@ -1,9 +1,10 @@
-<div class="story-box">
+<% @storys.each do |story| %>
+  <div class="story-box">
     <span class="name"></span>
   <a class="wall" href="/story/1925/comments" style="background-image: url(https://img.sty.fun/t/uploads/user/wall/5126/cc0ee168.jpeg);"></a>
-   <div class="category">
-    <a data-is="print" class="category__label study category__label__after" href="/category/120" label="勉強">勉強</a>
-   </div>
+  <div class="category">
+    <a data-is="print" class="category__label love category__label__after" href="/category/120" label="<%= @category.name %>" style="background-color: <%= @category.color %>;"><%= @category.name %></a>
+  </div>
   <a class="wrapper" href="/story/1925/comments">
     <div class="top clearfix">
       <div class="left">
@@ -52,4 +53,5 @@
       </div>
     </div>
   </a>
-</div>
+  </div>
+<% end %>

@@ -1,6 +1,8 @@
 class LatestController < ApplicationController
+  LATESTSTORYS = 12
+
   def index
-    @story = Story.new
-    @storys = Story.all.page(params[:page]).per(12).reverse
+    @categorys = Category.all
+    @storys = Story.all.page(params[:page]).per(LATESTSTORYS).order('created_at DESC')
   end
 end
