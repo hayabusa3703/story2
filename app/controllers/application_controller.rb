@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
   TOPSTORYS = 4
   def index
     @story = Story.new
-    @storys = Story.all.page(params[:page]).per(TOPSTORYS).order('created_at DESC')
+    @storys = Story.page(params[:page]).per(TOPSTORYS).by_created_at
     @categorys = Category.all
   end
 end
