@@ -1,9 +1,11 @@
-<%= render 'new/titlebar'%>
-
-<div class="container">
-  <%= render 'new/toolbar'%>
-
-  <div class="form-contents">
-    <%= render 'new/form'%>
-  </div>
+<div class="container" id="stories-inner">
+  <form class="edit_story" id="edit_story_31059" action="/story/31059" accept-charset="UTF-8" method="post">
+    <div data-is="stories-header" open_status="is_draft" class="stories-header">
+      <%= render 'new/toolbar'%>
+      <%= render 'new/titlebar'%>
+    </div>
+    <div data-is="stories-body" class="stories-body">
+      <%= render 'new/form'%>
+    </div>
+  </form>
 </div>

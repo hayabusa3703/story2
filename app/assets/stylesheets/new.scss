@@ -14,17 +14,56 @@
  *= require_self
  */
 
- [data-is="titlebar-wrapper"] > .wrapper {
-  background-color: #FFF;
-  padding-top: 50px;
-  z-index: 20;
+* {
+  box-sizing: border-box;
 }
 
-
-.form-contents {
-  float: left;
-  padding: 100px 0 0 250px;
+body {
+  background: url(/images/story/write_bg.png) !important;
+  position: relative;
 }
 
+#stories-inner{
+  position: relative;
+  height: 100%;
+  padding: 20px 20px 20px 120px;
+  width: 1088px;
+  margin: 0 auto;
+}
 
-[data-is="stories-body"] .stories-body {}
+[data-is="stories-header"] > .tool-menus {
+  position: fixed;
+  z-index: 9;
+  top: 0px;
+  left: 0px;
+  width: 200px;
+  height: 100vh;
+  background: #FFF;
+  border-right: 1px solid #EEE;
+  padding-bottom: 60px;
+}
+
+[data-is="new__titlebar__wrapper"] {
+  padding-top: 7px;
+  background: #FFF;
+  border-bottom: 1px solid #EEE;
+  position: fixed;
+  z-index: 10;
+  height: 60px;
+  width: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+[data-is="new__titlebar__wrapper"] > .titlebar {
+  position: relative;
+  z-index: 10;
+  width: 1088px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+[data-is="stories-body"] {
+  padding-top: 100px;
+}
