@@ -66,7 +66,7 @@
                 </a>
               </div>
             </div>
-            <%= render '/storys/social'%>
+
           </div>
         </div>
       </div>
@@ -79,14 +79,15 @@
             <div data-is="story-id-bookmark-form" >
               <div class = "inner" >
                <div class="icon"></div>
-                <%= form_for [@story, @comment] do |f| %>
-                  <%= f.text_field :text, placeholder: "コメントを書いてね！" %>
-                  <%= f.submit "送信"%>
-                <% end %>
+
              </div>
                 <%= render 'likes/like'%>
                  <div class="comments">
                    <h2>＜コメント一覧＞</h2>
+                                   <%= form_for [@story, @comment] do |f| %>
+                  <%= f.text_field :text, placeholder: "コメントを書いてね！" %>
+                  <%= f.submit "送信"%>
+                <% end %>
                 <%= render partial: 'comments', collection: @comments %>
                   </div>
                 <i class = "fa fa-star"> </i>
