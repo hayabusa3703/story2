@@ -4,14 +4,6 @@
   <%= render 'new/toolbar'%>
 
   <div class="contentsss">
-    <div data-is="stories-body" class="stories-body">
-      <%= form_for @story, url: storys_path do |f| %>
-        <%= f.text_field :title, placeholder:"タイトル" %>
-        <%= f.collection_select :category_id, Category.all, :id, :name %>
-          <p>↓本文を入力してください</p>
-        <%= f.text_area :text, placeholder:"テキスト", cols:"50", rows:"3" %>
-        <%= f.submit "公開する" %>
-      <% end %>
-    </div>
+    <%= render 'new/form'%>
   </div>
 </div>
