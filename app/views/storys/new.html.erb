@@ -1,16 +1,8 @@
 <%= render 'new/titlebar'%>
 
-
 <div class="container">
-  <div class="toolbar">
-    <div class="toolbar clearfix">
+  <%= render 'new/toolbar'%>
 
-      <div class="menus">
-
-      </div>
-    </div>
-
-  </div>
   <div class="contentsss">
     <div data-is="stories-body" class="stories-body">
       <%= form_for @story, url: storys_path do |f| %>
