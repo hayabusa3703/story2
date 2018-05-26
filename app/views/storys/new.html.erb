@@ -1,20 +1,4 @@
-<div class="topbarwrapper">
-  <div data-is="titlebar-wrapper">
-    <div class="titlebar">
-      <div class="titlebar-container">
-        <div class="left">
-
-        </div>
-        <a class="logo" href="/">
-          <%= image_tag "https://storys.jp/images/layouts/logo-white.png", class: "logo-image", alt: "storys.jp" %>
-        </a>
-        <div class="right">
-
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+<%= render 'new/titlebar'%>
 
 
 <div class="container">
@@ -28,12 +12,14 @@
 
   </div>
   <div class="contentsss">
-    <%= form_for @story, url: storys_path do |f| %>
-      <%= f.text_field :title, placeholder:"タイトル" %>
-      <%= f.collection_select :category_id, Category.all, :id, :name %>
-        <p>↓本文を入力してください</p>
-      <%= f.text_area :text, placeholder:"テキスト", cols:"50", rows:"3" %>
-      <%= f.submit "公開する" %>
-    <% end %>
+    <div data-is="stories-body" class="stories-body">
+      <%= form_for @story, url: storys_path do |f| %>
+        <%= f.text_field :title, placeholder:"タイトル" %>
+        <%= f.collection_select :category_id, Category.all, :id, :name %>
+          <p>↓本文を入力してください</p>
+        <%= f.text_area :text, placeholder:"テキスト", cols:"50", rows:"3" %>
+        <%= f.submit "公開する" %>
+      <% end %>
+    </div>
   </div>
 </div>
