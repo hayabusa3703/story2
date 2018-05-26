@@ -45,9 +45,97 @@
     }
    }
   }
- }
+  .wrapper1{
+    padding: 0 60px;
+    background-color: white;
+
+    .user1{
+    position: relative;
+    margin-top: -50px;
+
+      .img1{
+    border: 2px solid #FFF;
+    border-radius: 50%;
+    position: absolute;
+    left: 0px;
+    top: 0;
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    background-position: center center;
+    background-image: url(gokuuda.jpeg);
+      }
+      .main1{
+    padding-left: 120px;
+    padding-right: 50px;
+
+        .name1{
+    color: #FFF;
+    font-size: 18px;
+    font-weight: bold;
+    padding-top: 25px;
 }
 
+        .follow1{
+    padding-top: 15px;
+    font-size: 16px;
+
+          a{
+    text-decoration: none;
+    color: #c96200;
+    margin-right: 15px;
+          }
+        }
+
+        .description1{
+    padding-top: 15px;
+    font-size: 14px;
+    color: #444;
+    line-height: 22px;
+        }
+
+      }
+    }
+      .menus{
+        margin-top: 30px;
+
+        .wrapper2 {
+           border-top: 1px solid #EEE;
+
+           a.active2{
+    border-top: 2px solid #ce6800;
+    font-weight: bold;
+    padding-top: 10px;
+    display: inline-block;
+           }
+
+           .active2__story{
+              color: #ce6800;
+
+           }
+
+           a.bookmark2{
+    margin-top: -1px;
+    color: #ce6800;
+    text-decoration: none;
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 0 30px;
+    line-height: 30px;
+    font-size: 16px;
+    padding-top: 12px;
+           }
+
+           .bookmark2__text{
+            color: #ce6800;
+           }
+        }
+  }
+  }
+
+ }
+}
 
 #follow_button > a {
     display: inline-block;
