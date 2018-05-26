@@ -37,7 +37,7 @@ class StorysController < ApplicationController
   end
 
   def update
-    @story = Story.update(story_params)
+    @story.update(story_params)
   end
 
   private

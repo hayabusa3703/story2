@@ -353,13 +353,14 @@ i {
   background-image: url(/images/layouts/arrow.png);
 }
 
-/*span {
+span {
   color: #3c1d00;
   font-weight: bold;
   display: inline-block;
   padding-left: 10px;
   font-size: 16px;
-}*/
+}
+
 .story-discription {
   font-size: 14px;
   color: #666;
