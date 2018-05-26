@@ -2,7 +2,7 @@ class StorysController < ApplicationController
 
   before_action :move_to_index, except: :index
   before_action :set_story, only: [:show, :edit]
-  before_action :set_category, only: [:index, :new, :create]
+  before_action :set_category, only: [:index, :new, :create, :show]
   before_action :story_find, only: [:destroy, :edit, :update]
   CURRENTSTORYS = 1
 
@@ -10,12 +10,8 @@ class StorysController < ApplicationController
     @storys = Story.all.page(params[:page]).per(CURRENTSTORYS).order('created_at DESC')
   end
 
-   def show
-    @comments = @story.comments.includes(:user)
-    @comment = Comment.new
-  end
 
-   def show
+  def show
     @comments = @story.comments.includes(:user)
     @comment = Comment.new
   end
