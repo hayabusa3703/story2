@@ -18,9 +18,7 @@ Rails.application.routes.draw do
   end
 
   resources :storys, only: [:edit, :update, :new, :create]
-  resources :latest, only: [:index]
-  resources :legend, only: [:index]
-
-
+  resources :latest, only: [:index, :show]
+  resources :legend, only: [:index, :show]
   # resources :users, only: [:show]  機能確認しよう！
 end
