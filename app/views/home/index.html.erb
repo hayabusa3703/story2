@@ -5,8 +5,8 @@
       <div class="category-container">
         <div class="menu">
           <%= link_to(root_path, class: 'category__bg__after top')do %><span data-is="print" label="TOP">TOP</span><% end %>
-          <%= link_to(latest_path, class: 'category__bg__after top')do %><span data-is="print" label="新着">新着</span><% end %>
-          <%= link_to(legend_path, class: 'category__bg__after legend')do %><span data-is="print" label="殿堂入り">殿堂入り</span><% end %>
+          <%= link_to(latest_index_path, class: 'category__bg__after top')do %><span data-is="print" label="新着">新着</span><% end %>
+          <%= link_to(legend_index_path, class: 'category__bg__after legend')do %><span data-is="print" label="殿堂入り">殿堂入り</span><% end %>
         </div>
       </div>
     </div>
@@ -14,23 +14,49 @@
 </div>
 <div class="container-latest">
   <%= render 'application/toolbar'%>
-  <div class="main"> <% if user_signed_in? %>
-        <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-      <% else %>
-        <%= link_to "ログイン", new_user_session_path, class: 'post' %>
-        <%= link_to "新規登録", new_user_registration_path, class: 'post' %>
-      <% end %>
+  <div class="main">
     <div class="contents">
       <div class="contents-container clearfix">
-        <div class="layout-column-main">
+        <div data-is="user-id">
+          <div class="global-box">
+            <div class="wall">
+              <div class="tool">
+                <div class="message">
+                  <a href="">
+                    <i class="fa fa-envelope-o"></i><!-- 未実装の機能のため今後リンク先を追加する予定です。-->
+                  </a>
+                </div>
+                <div class="follow">
+                  <div id="js-follow-user-172997">
+                    <div id="follow_button">
+                      <a class="button ui mini primary" href="/settings/profile"><!-- 未実装の機能のため今後リンク先を追加する予定です。-->
+                        <span class = "profile__edit">プロフィールを編集</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
           <div class="story-list clearfix">
             <!-- ストーリーボックスの中身 -->
             <%= render partial: 'home/story-box', collection: @storys, as: "story" %>
             <!-- ストーリーボックスの中身 -->
           </div>
-        </div>
       </div>
     </div>
     <%= render 'application/footer' %>
   </div>
 </div>
+
+
+
+<% if user_signed_in? %>
+        <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+      <% else %>
+        <%= link_to "ログイン", new_user_session_path, class: 'post' %>
+        <%= link_to "新規登録", new_user_registration_path, class: 'post' %>
+      <% end %>
+<!-- これはログインするとき用に、置いておきましょうか！！！！一応！！！ -->
+
