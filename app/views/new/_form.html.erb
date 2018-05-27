@@ -1,8 +1,28 @@
-<%= form_for @story, url: storys_path do |f| %>
-  <%= f.text_field :title, placeholder:"タイトル" %>
-  <%= f.collection_select :category_id, Category.all, :id, :name %>
-    <p>↓本文を入力してください</p>
-  <%= f.text_area :text, placeholder:"テキスト", cols:"50", rows:"3" %>
-  <%= f.submit "公開する" %>
-<% end %>
+<div class="form__wrapper">
+  <div class="error"></div>
+  <div class="form_fields">
+    <div class="category_wrapper js-category-label">
+      <div class="category_field" data-is="print_field" label="ここをクリックしてカテゴリを選択">ここをクリックしてカテゴリを選択</div>
+      <div class="fa fa-pencil"></div>
+    </div>
+    <div class="title"></div>
+    <div class="user clearfix"></div>
+    <div class="explain"></div>
+    <div class="body story-html"></div>
+  </div>
+</div>
 
+
+
+
+
+<!-- 仮置きです！ -->
+<div class="kari">
+  <%= form_for @story, url: storys_path do |f| %>
+    <%= f.text_field :title, placeholder:"タイトル" %>
+    <%= f.collection_select :category_id, Category.all, :id, :name %>
+      <p>↓本文を入力してください</p>
+    <%= f.text_area :text, placeholder:"テキスト", cols:"50", rows:"3" %>
+    <%= f.submit "公開する" %>
+  <% end %>
+</div>
