@@ -1,14 +1,13 @@
-<%= render 'application/titlebar' %>
-<div class="container">
-  <div class="toolbar">
-  </div>
-  <div class="contentsss">
-    <%= form_for @story, url: storys_path do |f| %>
-      <%= f.text_field :title, placeholder:"タイトル" %>
-      <%= f.collection_select :category_id, Category.all, :id, :name %>
-        <p>↓本文を入力してください</p>
-      <%= f.text_area :text, placeholder:"テキスト", cols:"50", rows:"3" %>
-      <%= f.submit "公開する" %>
-    <% end %>
+<div class="yield-container">
+  <div class="new__container" id="stories-inner">
+    <form class="edit_story" id="storys" action="/storys" accept-charset="UTF-8" method="post">
+      <div data-is="stories-header" open_status="is_draft" class="stories-header">
+        <%= render 'new/toolbar'%>
+        <%= render 'new/titlebar'%>
+      </div>
+      <div data-is="stories-body" class="stories-body">
+        <%= render 'new/form'%>
+      </div>
+    </form>
   </div>
 </div>
