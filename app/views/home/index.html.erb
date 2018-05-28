@@ -1,17 +1,4 @@
-<div class="topbarwrapper">
-  <%= render 'application/titlebar'%>
-  <div data-is="categorybar-wrapper">
-    <div class="categorybar">
-      <div class="category-container">
-        <div class="menu">
-          <%= link_to(root_path, class: 'category__bg__after top')do %><span data-is="print" label="TOP">TOP</span><% end %>
-          <%= link_to(latest_index_path, class: 'category__bg__after top')do %><span data-is="print" label="新着">新着</span><% end %>
-          <%= link_to(legend_index_path, class: 'category__bg__after legend')do %><span data-is="print" label="殿堂入り">殿堂入り</span><% end %>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+<%= render 'application/titlebar'%>
 <div class="container-latest">
   <%= render 'application/toolbar'%>
   <div class="main">
@@ -70,17 +57,7 @@
           </div>
       </div>
     </div>
+    <div class = "paginate"><%= paginate(@storys) %></div>
     <%= render 'application/footer' %>
   </div>
 </div>
-
-
-
-<% if user_signed_in? %>
-        <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-      <% else %>
-        <%= link_to "ログイン", new_user_session_path, class: 'post' %>
-        <%= link_to "新規登録", new_user_registration_path, class: 'post' %>
-      <% end %>
-<!-- これはログインするとき用に、置いておきましょうか！！！！一応！！！ -->
-
