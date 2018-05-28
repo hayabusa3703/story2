@@ -1,6 +1,10 @@
 class HomeController < ApplicationController
-    def index
+
+PROFILESTORYS = 6
+
+  def index
+    @categorys = Category.all
     @story = Story.new
-    @storys = Story.all.page(params[:page]).per(2).reverse
+    @storys = Story.page(params[:page]).per(PROFILESTORYS).by_created_at
   end
 end

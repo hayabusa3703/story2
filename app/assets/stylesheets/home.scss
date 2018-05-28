@@ -1,3 +1,232 @@
-// Place all the styles related to the home controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+[data-is="user-id"] {
+
+  .global-box {
+    background: #FFF;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 2px rgba(207,196,163,0.3);
+    margin-bottom: 20px;
+
+  .wall {
+    overflow: hidden;
+    position: relative;
+    height: 150px;
+    background-image: url(https://storys.jp/images/user/wall-default.png);
+
+  .tool {
+
+    position: absolute;
+    top: 7px;
+    right: 5px;
+
+  .message{
+    display: inline-block;
+
+      a{
+      background: #fecc00;
+      display: inline-block;
+      width: 32px;
+      height: 32px;
+      line-height: 32px;
+      font-size: 16px;
+      text-align: center;
+      font-weight: bold;
+      color: #FFF;
+      border-radius: 50%;
+    }
+   }
+
+  .follow{
+    display: inline-block;
+    }
+   }
+  }
+  .wrapper1{
+    padding: 0 60px;
+    background-color: white;
+
+    .user1{
+    position: relative;
+    margin-top: -50px;
+
+    .img1{
+    border: 2px solid #FFF;
+    border-radius: 50%;
+    position: absolute;
+    left: 0px;
+    top: 0;
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    background-position: center center;
+    background-image: url(gokuuda.jpeg);
+   }
+
+    .main1{
+    padding-left: 120px;
+    padding-right: 50px;
+
+       .name1{
+	    color: #FFF;
+	    font-size: 18px;
+	    font-weight: bold;
+	    padding-top: 25px;
+}
+
+    .follow1{
+    padding-top: 15px;
+    font-size: 16px;
+
+          a{
+    	text-decoration: none;
+    	color: #c96200;
+    	margin-right: 15px;
+          }
+        }
+
+        .description1{
+    padding-top: 15px;
+    font-size: 14px;
+    color: #444;
+    line-height: 22px;
+        }
+      }
+    }
+
+       .menus{
+        margin-top: 30px;
+
+        .wrapper2 {
+           border-top: 1px solid #EEE;
+
+           a.active2{
+			    border-top: 2px solid #ce6800;
+			    font-weight: bold;
+			    padding-top: 10px;
+			    display: inline-block;
+			    text-decoration: none;
+           }
+
+        .active2__story{
+           color: #ce6800;
+           }
+
+           a.bookmark2{
+			    margin-top: -1px;
+			    text-decoration: none;
+			    display: inline-block;
+			    margin-left: 10px;
+			    margin-right: 10px;
+			    padding: 0 30px;
+			    line-height: 30px;
+			    font-size: 16px;
+			    padding-top: 12px;
+           }
+
+       .bookmark2__text{
+       	   color: #ce6800;
+       	  }
+        }
+      }
+    }
+  }
+}
+
+#follow_button > a {
+    display: inline-block;
+    border-radius: 15px;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    line-height: 32px;
+    padding: 0 25px;
+    background-color: #2185D0;
+    text-shadow: none;
+    background-image: none;
+    box-shadow: 0px 0em 0px 0px rgba(34,36,38,0.15) inset;
+}
+
+.profile__edit{
+  color: #FFFFFF;
+}
+
+
+[data-is="home__paginate"] {
+	padding-bottom: 40px;
+	margin-left: 400px;
+}
+
+[data-is="home__paginate"] > nav > span {
+	display: inherit;
+}
+
+.pagination {
+
+  .first{
+
+    a{
+    font-size: 16px;
+    border: 1px solid #736335;
+    color: #736335;
+		padding: 10px 15px;
+    text-decoration: none;
+    float: left;
+    }
+  }
+
+  .prev{
+
+  	a{
+  	font-size: 16px;
+    border: 1px solid #736335;
+    color: #736335;
+		padding: 10px 15px;
+    text-decoration: none;
+     float: left;
+  	}
+  }
+
+    .next{
+
+  	a{
+	  font-size: 16px;
+    border: 1px solid #736335;
+    color: #736335;
+		padding: 10px 15px;
+    text-decoration: none;
+    float: left;
+  	}
+  }
+
+    .last{
+
+  	a{
+	  font-size: 16px;
+    border: 1px solid #736335;
+    color: #736335;
+		padding: 10px 15px;
+    text-decoration: none;
+    float: left;
+  	}
+  }
+
+  .page.current{
+	 color: #FFF;
+     font-size: 16px;
+     border: 1px solid #736335;
+  	 background: #938355;
+     padding: 10px 15px;
+     float: left;
+  }
+
+  .page{
+
+    a{
+    font-size: 16px;
+    border: 1px solid #736335;
+    color: #736335;
+		padding: 10px 15px;
+    text-decoration: none;
+    float: left;
+    }
+  }
+}
