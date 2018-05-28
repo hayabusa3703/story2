@@ -30,18 +30,6 @@
 }
 
 // ここからがtitlebarの記述です
-[data-is="stories-header"] > .tool-menus {
-  position: fixed;
-  z-index: 9;
-  top: 0px;
-  left: 0px;
-  width: 200px;
-  height: 100vh;
-  background: #FFF;
-  border-right: 1px solid #EEE;
-  padding-bottom: 60px;
-}
-
 [data-is="new__titlebar__wrapper"] {
   padding-top: 7px;
   background: #FFF;
@@ -156,6 +144,87 @@ margin-right: 5px;
   border: none;
   width: 66px;
 }
+// ここからがtoolbarの記述です
+[data-is="stories-header"] > .tool-menus {
+  position: fixed;
+  z-index: 9;
+  top: 0px;
+  left: 0px;
+  width: 200px;
+  height: 100vh;
+  background: #FFF;
+  border-right: 1px solid #EEE;
+  padding-bottom: 60px;
+}
+[data-is="stories-header"] > .tool-menus > .inner {
+  margin-top: 60px;
+  padding: 20px 15px;
+  overflow-y: scroll;
+  height: 100%;
+}
+[data-is="stories-header"] > .tool-menus > .inner > .write {
+  text-align: center;
+}
+
+[data-is="stories-header"] > .tool-menus > .inner > .label {
+  text-align: center;
+  font-weight: bold;
+  font-size: 13px;
+  color: #61472e;
+  padding: 30px 0 20px;
+}
+
+.ui.basic.button {
+  background: transparent none !important;
+  color: rgba(0,0,0,0.6) !important;
+  font-weight: normal;
+  border-radius: 0.28571429rem;
+  text-transform: none;
+  text-shadow: none !important;
+  box-shadow: 0px 0px 0px 1px rgba(34,36,38,0.15) inset;
+}
+
+.ui.button {
+  cursor: pointer;
+  display: inline-block;
+  min-height: 1em;
+  outline: none;
+  border: none;
+  vertical-align: baseline;
+  margin: 0em 0.25em 0em 0em;
+  padding: 0.78571429em 1.5em 0.78571429em;
+  line-height: 1em;
+  font-style: normal;
+  text-align: center;
+  text-decoration: none;
+}
+
+[data-is="stories-header"] > .tool-menus > .inner > .lists > a {
+  display: block;
+  background: #f0ece1;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  text-decoration: none;
+}
+
+[data-is="stories-header"] > .tool-menus > .inner > .lists > a > .title {
+  font-size: 14px;
+  color: #444;
+  line-height: 22px;
+  padding-bottom: 5px;
+  letter-spacing: normal;
+  padding-top: 0;
+}
+
+[data-is="stories-header"] > .tool-menus > .inner > .lists > a > .date {
+  font-size: 11px;
+  color: #aaa;
+}
+
+
+
+
 
 // ここからがformの記述です
 [data-is="stories-body"] {
@@ -263,17 +332,3 @@ margin-right: 5px;
   outline: none;
   min-height: 400px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-

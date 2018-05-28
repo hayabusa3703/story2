@@ -3,21 +3,21 @@
   <div class="form_fields">
     <%= form_for @story, url: storys_path do |f| %>
     <div class="category_wrapper js-category-label">
-      <div class="category_field" data-is="print_field" label="ここをクリックしてカテゴリを選択">ここをクリックしてカテゴリを選択</div>
-      <div class="fa fa-pencil"></div><%= f.collection_select :category_id, Category.all, :id, :name %><span>本当はjsでやりたい^^;</span>
+      <div class="category_field" data-is="print_field" label="ここをクリックしてカテゴリを選択">ここをクリックしてカテゴリを選択(ここを本当はjsでやりたい^^;)</div>
+      <div class="fa fa-pencil"></div><%= f.collection_select :category_id, Category.all, :id, :name %>
     </div>
     <div class="title">
       <%= f.text_field :title, placeholder:"タイトル" %>
     </div>
     <div class="user clearfix">
-      <img src="https://img.sty.fun/t/uploads/user/second_image/173010/d760dce0.jpeg?ds=s&amp;of=jpg&amp;dw=40&amp;dh=40&amp;da=s&amp;cw=40&amp;ch=40">      <!-- 仮置きなので、ユーザのアイコン画像のリンクを貼ります -->
+      <img src="https://img.sty.fun/t/uploads/user/second_image/173010/d760dce0.jpeg?ds=s&amp;of=jpg&amp;dw=40&amp;dh=40&amp;da=s&amp;cw=40&amp;ch=40">      <!-- 仮置きなので、ユーザのアイコン画像のリンクを貼ることができるコードにしたいです。 -->
       <div class="name">
         <div class="text">著者:</div>
         <span data-is=print_field>yoshimitsu egashira</span>
       </div>
     </div>
     <div class="explain">
-      <i class="fa fa-arrow-down"></i><p>本文を入力してください(改行されてしまうのを後ほど修正します)</p>
+      <i class="fa fa-arrow-down"></i>本文を入力してください
     </div>
     <div class="body story-html">
       <%= f.text_area :text, placeholder:"本文を入力してください" %>
