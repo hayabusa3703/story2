@@ -1,0 +1,330 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+*= require_tree .
+ *= require_self
+ */
+
+* {
+  box-sizing: border-box;
+}
+.yield-container {
+  background: url(https://storys.jp/images/story/write_bg.png)
+}
+
+#stories-inner{
+  position: relative;
+  height: 100vh;
+  padding: 20px 20px 20px 120px;
+  width: 1088px;
+  margin: 0 auto;
+}
+
+// ここからがtitlebarの記述です
+[data-is="new__titlebar__wrapper"] {
+  padding-top: 7px;
+  background: #FFF;
+  border-bottom: 1px solid #EEE;
+  position: fixed;
+  z-index: 10;
+  height: 60px;
+  width: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+[data-is="new__titlebar__wrapper"] > .titlebar {
+  position: relative;
+  z-index: 10;
+  width: 1088px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+[data-is="new__titlebar__wrapper"] > .titlebar-container > .left > .icon-button {
+  text-decoration: none;
+  color: #afa9a3;
+  font-size: 24px;
+  padding-left: 0;
+  display: block;
+}
+
+[data-is="new__titlebar__wrapper"] > .titlebar-container > .left .icon-button > i {
+  padding-right: 5px;
+  float: left;
+  line-height: 40px;
+}
+
+[data-is="new__titlebar__wrapper"] > .titlebar-container > .left .icon-button > .mini {
+  font-size: 16px;
+margin-right: 5px;
+}
+
+[data-is="new__titlebar__wrapper"] > .titlebar-container > .left .icon-button > .index {
+  padding: 5px;
+}
+
+.fa-chevron-left:before {
+  content: "\f053";
+}
+
+.fa-index:before {
+  content: "\f01c";
+}
+
+[data-is="new__titlebar__wrapper"] > .titlebar-container > .logo {
+  top: 11px;
+  vertical-align: middle;
+  width: 1088px;
+}
+
+[data-is="new__titlebar__wrapper"] > .titlebar-container > .logo > .logo-image {
+  margin: 0;
+  height: 16px;
+  width: 168.8px;
+}
+
+[data-is="new__titlebar__wrapper"] > .titlebar-container > .right > .save-button {
+  display: none;
+}
+
+[data-is="new__titlebar__wrapper"] > .titlebar-container > .right > .icon-button {
+  text-decoration: none;
+  color: #afa9a3;
+  font-size: 24px;
+}
+
+[data-is="new__titlebar__wrapper"] > .titlebar-container > .right > .icon-button > i {
+  padding-right: 5px;
+  float: left;
+  line-height: 40px;
+}
+
+[data-is="new__titlebar__wrapper"] > .titlebar-container > .right > .icon-button > .mini {
+  font-size: 16px;
+}
+
+[data-is="new__titlebar__wrapper"] > .titlebar-container > .right > .save-menus {
+  padding-top: 7px;
+}
+
+[data-is="new__titlebar__wrapper"] > .titlebar-container > .right > .save-menus > button {
+  background: #FFF;
+  color: #a8853f;
+  border: 2px solid #edeadd;
+  border-radius: 50px;
+  height: 32px;
+  font-size: 12px;
+  display: inline-block;
+  margin-left: 2px;
+  line-height: 28px;
+  box-shadow: 0 1px 3px 0px rgba(207, 196, 163, 0.3);
+}
+
+[data-is="new__titlebar__wrapper"] > .titlebar-container > .right > .save-menus > button.is_draft {
+  background: #FFF;
+  color: #a8853f;
+  border: 2px solid #edeadd;
+  width: 70px;
+}
+
+[data-is="new__titlebar__wrapper"] > .titlebar-container > .right > .save-menus > button.is_open {
+  color: #6b3501;
+  background: #ffe300;
+  border: none;
+  width: 66px;
+}
+// ここからがtoolbarの記述です
+[data-is="stories-header"] > .tool-menus {
+  position: fixed;
+  z-index: 9;
+  top: 0px;
+  left: 0px;
+  width: 200px;
+  height: 100vh;
+  background: #FFF;
+  border-right: 1px solid #EEE;
+  padding-bottom: 60px;
+}
+[data-is="stories-header"] > .tool-menus > .inner {
+  margin-top: 60px;
+  padding: 20px 15px;
+  overflow-y: scroll;
+  height: 100%;
+}
+[data-is="stories-header"] > .tool-menus > .inner > .write {
+  text-align: center;
+}
+
+[data-is="stories-header"] > .tool-menus > .inner > .label {
+  text-align: center;
+  font-weight: bold;
+  font-size: 13px;
+  color: #61472e;
+  padding: 30px 0 20px;
+}
+
+.ui.basic.button {
+  background: transparent none !important;
+  color: rgba(0,0,0,0.6) !important;
+  font-weight: normal;
+  border-radius: 0.28571429rem;
+  text-transform: none;
+  text-shadow: none !important;
+  box-shadow: 0px 0px 0px 1px rgba(34,36,38,0.15) inset;
+}
+
+.ui.button {
+  cursor: pointer;
+  display: inline-block;
+  min-height: 1em;
+  outline: none;
+  border: none;
+  vertical-align: baseline;
+  margin: 0em 0.25em 0em 0em;
+  padding: 0.78571429em 1.5em 0.78571429em;
+  line-height: 1em;
+  font-style: normal;
+  text-align: center;
+  text-decoration: none;
+}
+
+[data-is="stories-header"] > .tool-menus > .inner > .lists > a {
+  display: block;
+  background: #f0ece1;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  text-decoration: none;
+}
+
+[data-is="stories-header"] > .tool-menus > .inner > .lists > a > .title {
+  font-size: 14px;
+  color: #444;
+  line-height: 22px;
+  padding-bottom: 5px;
+  letter-spacing: normal;
+  padding-top: 0;
+}
+
+[data-is="stories-header"] > .tool-menus > .inner > .lists > a > .date {
+  font-size: 11px;
+  color: #aaa;
+}
+
+
+
+
+
+// ここからがformの記述です
+[data-is="stories-body"] {
+  padding-top: 60px;
+  width: 100%;
+}
+
+.form__wrapper {
+  width: 100%;
+}
+
+[data-is="stories-body"] > .form__wrapper > .form_fields {
+  height: 100%;
+  width: 100%;
+}
+
+[data-is="stories-body"] > .form__wrapper > .form_fields > .category_wrapper {
+  padding: 5px 8px;
+  border: 1px solid #afaaa4;
+  display: inline-block;
+  border-radius: 3px;
+  color: #74716e;
+  margin-bottom: 10px;
+  height: 27px;
+}
+
+[data-is="stories-body"] > .form__wrapper > .form_fields > .category_wrapper > .category_field {
+  display: inline-block;
+}
+
+[data-is="stories-body"] > .form__wrapper > .form_fields > .title {
+  padding-bottom: 20px;
+}
+[data-is="stories-body"] > .form__wrapper > .form_fields > .title > input {
+  color: #3c1d00;
+  width: 100%;
+  background: url(https://storys.jp/images/story/story_bg.jpg);
+  padding: 20px;
+  font-size: 20px;
+  border: none;
+  outline: none;
+}
+
+[data-is="stories-body"] > .form__wrapper > .form_fields > .user {
+  display: block;
+  text-decoration: none;
+  margin-top: 0;
+}
+
+[data-is="stories-body"] > .form__wrapper > .form_fields > .user > img {
+  width: 45px;
+  height: 45px;
+  display: block;
+  border-radius: 50%;
+  float: left;
+  margin-right: 20px;
+}
+
+[data-is="stories-body"] > .form__wrapper > .form_fields > .user > .name > .text {
+  display: inline-block;
+  color: #8c7e71;
+  padding-right: 5px;
+}
+[data-is="stories-body"] > .form__wrapper > .form_fields > .user > .name {
+  float: left;
+  padding-top: 9px;
+  font-size: 16px;
+}
+
+[data-is="stories-body"] > .form__wrapper > .form_fields > .user > .name > span {
+  display: inline-block;
+  color: #3c1d00;
+  font-weight: normal;
+}
+
+[data-is="stories-body"] > .form__wrapper > .form_fields > .explain {
+  color: #bbb9b6;
+  padding: 12px 0;
+}
+
+[data-is="stories-body"] > .form__wrapper > .form_fields > .explain > i {
+  margin-right: 5px;
+  font-size: 14px;
+}
+
+[data-is="stories-body"] > .form__wrapper > .form_fields > .body {
+  position: relative;
+}
+
+.story-html {
+  font-size: 16px;
+  color: #3c1d00;
+}
+
+[data-is="stories-body"] > .form__wrapper > .form_fields > .body > .edit_area {
+  width: 100%;
+  background: url(https://storys.jp/images/story/story_bg.jpg);
+  padding: 20px;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  min-height: 400px;
+}
