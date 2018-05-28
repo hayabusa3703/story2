@@ -21,6 +21,4 @@ Rails.application.routes.draw do
   resources :latest, only: [:index, :show]
   resources :legend, only: [:index, :show]
   resources :home,   only: [:index]
-
-  # resources :users, only: [:show]  機能確認しよう！
 end
