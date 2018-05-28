@@ -102,11 +102,11 @@
 			    font-weight: bold;
 			    padding-top: 10px;
 			    display: inline-block;
+			    text-decoration: none;
            }
 
         .active2__story{
            color: #ce6800;
-
            }
 
            a.bookmark2{
@@ -155,7 +155,7 @@
   .first{
 
         a{
-        	  font-size: 20px;
+        	  font-size: 10px;
         border: 1px solid #736335;
         color: #736335;
 		padding: 10px 15px;
@@ -167,7 +167,7 @@
   .prev{
 
   	a{
-  		        	  font-size: 20px;
+  		        	  font-size: 10px;
         border: 1px solid #736335;
         color: #736335;
 		padding: 10px 15px;
@@ -179,7 +179,7 @@
     .next{
 
   	a{
-  		        	  font-size: 20px;
+  		        	  font-size: 10px;
         border: 1px solid #736335;
         color: #736335;
 		padding: 10px 15px;
@@ -191,7 +191,7 @@
       .last{
 
   	a{
-  		        	  font-size: 20px;
+  		        	  font-size: 10px;
         border: 1px solid #736335;
         color: #736335;
 		padding: 10px 15px;
@@ -204,7 +204,7 @@
 
   .page.current{
 	 color: #FFF;
-     font-size: 20px;
+     font-size: 10px;
      border: 1px solid #736335;
   	 background: #938355;
      padding: 10px 15px;
@@ -215,7 +215,7 @@
 
 
         a{
-        font-size: 20px;
+        font-size: 10px;
         border: 1px solid #736335;
         color: #736335;
 		padding: 10px 15px;
@@ -224,8 +224,16 @@
     }
   }
 }
-
-.paginate{
+[data-is="paginate"] {
 	margin-left: 500px;
 	padding-bottom: 40px;
+
 }
+
+[data-is="paginate"] > nav > span {
+	display: inherit;
+}
+
+
+
+
