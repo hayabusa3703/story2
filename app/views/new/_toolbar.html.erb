@@ -1,7 +1,7 @@
 <div class="tool-menus">
   <div class="inner">
     <div class="write">
-      <%= link_to "新しく書く",storys_path, class: "ui button basic mini" %>
+      <%= link_to "新しく書く",new_story_path, class: "ui button basic mini" %>
     </div>
     <div class="label">非公開</div>
     <div class="lists">
@@ -13,8 +13,8 @@
     <div class="label">公開済み</div>
     <div class="lists">
       <%= link_to storys_path do %>        <!-- each文でこれまでの投稿を取り出して来るコードを書きたい -->
-        <div class="title" data-is="print" label="下書き">下書き</div>
-        <div class="date" data-is="print" label="2018年5月23日">2018年5月23日</div>
+        <div class="title" data-is="print" label="未来">未来</div>
+        <div class="date" data-is="print" label="2018年4月30日">2018年4月30日</div>
       <% end %>
     </div>
   </div>
