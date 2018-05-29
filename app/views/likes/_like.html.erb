@@ -1,9 +1,35 @@
-<% if user_signed_in? %>
-    <%= button_to story_likes_path(@story), id: "like-button", remote: true do %>
-        <input type= "button" value='読んで良かった' onclick= "window.location.reload()">
-      <span>
-        <%= @story.likes_count %>
-      </span>
+<div class="like-link" id="like-link-<%= story.id %>">
+  <% if current_user.likes.find_by(story_id: story.id) %>
+    <%= link_to unlike_path(story.id), method: :delete, remote: true do %>
+      <div class="btn btn-default glyphicon glyphicon-heart" id="heart-<%= story.id %>">
+        <div class = "aaa"><button type="button" class="glyphicon glyphicon-align-center">読んで良かった <%= story.likes.count %></button> </div>
+      </div>
     <% end %>
-<% end %>
+  <% else %>
+    <%= link_to like_path(story.id), method: :post, remote: true do %>
+      <div class="btn btn-default glyphicon glyphicon-heart-empty" id="heart-<%= story.id %>">
+        <div class = "aaa"> <button type="button" class="btn btn-primary btn-lg btn-block">読んで良かった<%= story.likes.count %></button>  </div>
+      </div>
+    <% end %>
+  <% end %>
+</div>
 
+
+
+<!-- 
+
+<div class="like-link" id="like-link-<%= story.id %>">
+  <% if current_user.likes.find_by(story_id: story.id) %>
+    <%= link_to unlike_path(story.id), method: :delete, remote: true do %>
+      <div class="btn btn-default glyphicon glyphicon-heart" id="heart-<%= story.id %>">
+        <div class = "aaa">読んで良かった   <%= story.likes.count %></div>
+      </div>
+    <% end %>
+  <% else %>
+    <%= link_to like_path(story.id), method: :post, remote: true do %>
+      <div class="btn btn-default glyphicon glyphicon-heart-empty" id="heart-<%= story.id %>">
+        <div class = "aaa">読んで良かった   <%= story.likes.count %></div>
+      </div>
+    <% end %>
+  <% end %>
+</div> -->

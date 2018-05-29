@@ -62,7 +62,7 @@
       <div class="contents-container clearfix">
         <div class="layout-column-main">
           <div class="story-add-engagement">
-            <h3 class="h3-global">みんなの読んで良かった！</h3>
+            <h3 class="h3-global">みんなの読んで良かった！</h3>   <%= render partial: 'storys/storys', collection: @storys, as: :story %>
             <div data-is="story-id-bookmark-form" >
               <div class = "inner" >
                <div class="icon"></div>
