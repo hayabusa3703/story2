@@ -79,18 +79,25 @@
             <div data-is="story-id-bookmark-form" >
               <div class = "inner" >
                <div class="icon"></div>
-
-             </div>
-                <%= render 'likes/like'%>
-                 <div class="comments">
-                   <h2>＜コメント一覧＞</h2>
-                                   <%= form_for [@story, @comment] do |f| %>
-                  <%= f.text_field :text, placeholder: "コメントを書いてね！" %>
-                  <%= f.submit "送信"%>
-                <% end %>
-                <%= render partial: 'comments', collection: @comments %>
+                  <div id="modal-main">
+                    <div class = "qqqqq">✖️</div>
+                      <%= form_for [@story, @comment] do |f| %>
+                        <%= f.text_field :text, placeholder: "コメントを書いてね！" %>
+                        <%= f.submit "送信"%>
+                      <% end %>
+                      <%= render 'likes/like'%>
                   </div>
-                <i class = "fa fa-star"> </i>
+                  <!-- #contents START -->
+                    <div id="contents">
+                      <p><a id="modal-open">
+                        <i class = "fa fa-star"></i>読んで良かった！</a></p>
+                    </div>
+                  <!--/#contents-->
+              </div>
+                <div class="comments"><%= render 'likes/like'%>
+                  <h2>＜コメント一覧＞</h2>
+                   <%= render partial: 'comments', collection: @comments %>
+                </div>
             </div>
           </div>
         </div>
