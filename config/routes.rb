@@ -20,5 +20,5 @@ Rails.application.routes.draw do
   resources :storys, only: [:edit, :update, :new, :create]
   resources :latest, only: [:index, :show]
   resources :legend, only: [:index, :show]
-  resources :home,   only: [:index]
+  resources :users,   only: [:index]
 end
