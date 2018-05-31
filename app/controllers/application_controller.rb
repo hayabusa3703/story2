@@ -5,7 +5,11 @@ class ApplicationController < ActionController::Base
   TOPSTORYS = 4
 
   def index
-    @user = User.find(current_user.id)
+    if user_signed_in?
+      @user = User.find(current_user.id)
+    else
+      redirect_to "/users/sign_in"
+    end
     @storys = Story.page(params[:page]).per(TOPSTORYS).by_created_at
     @categorys = Category.all
   end
