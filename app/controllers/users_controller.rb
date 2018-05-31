@@ -2,16 +2,20 @@ class UsersController < ApplicationController
 
 PROFILESTORYS = 6
 
-  def show
+  def index
     @categorys = Category.all
-    @story = Story.new
     @storys = Story.page(params[:page]).per(PROFILESTORYS).by_created_at
   end
 
   def edit
+    @categorys = Category.all
   end
 
-  def update
+  def show
+    @name = current_user.nickname
+    @categorys = Category.all
+    @storys = Story.page(params[:page]).per(PROFILESTORYS).by_created_at
   end
+
 
 end
