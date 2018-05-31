@@ -5,6 +5,7 @@ class ApplicationController < ActionController::Base
   TOPSTORYS = 4
 
   def index
+    @user = User.find(current_user.id)
     @storys = Story.page(params[:page]).per(TOPSTORYS).by_created_at
     @categorys = Category.all
   end
@@ -12,7 +13,7 @@ class ApplicationController < ActionController::Base
   protected
 
   def configure_permitted_parameters
-    added_attrs = [ :name, :email, :password, :password_confirmation, :image, :text]
+    added_attrs = [ :name, :email, :password, :password_confirmation, :image, :text ]
     devise_parameter_sanitizer.permit :sign_up, keys: added_attrs
     devise_parameter_sanitizer.permit :account_update, keys: added_attrs
     devise_parameter_sanitizer.permit :sign_in, keys: added_attrs

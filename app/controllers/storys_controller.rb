@@ -7,6 +7,7 @@ class StorysController < ApplicationController
   CURRENTSTORYS = 1
 
   def index
+    @user = User.find(current_user.id)
     @storys = Story.all.page(params[:page]).per(CURRENTSTORYS).order('created_at DESC')
   end
 
@@ -17,6 +18,7 @@ class StorysController < ApplicationController
   end
 
   def new
+    @user = User.find(current_user.id)
     @story = current_user.stories.build
   end
 

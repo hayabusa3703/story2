@@ -16,7 +16,7 @@
                 <div class="follow">
                   <div id="js-follow-user-172997">
                     <div id="follow_button">
-                      <%= link_to "プロフィールを編集", edit_user_path(), class: "button ui mini primary"%>
+                      <%= link_to "プロフィールを編集", edit_user_path(:id), class: "button ui mini primary"%>
                         <span class = "profile__edit"></span>
                       </a>
                     </div>
@@ -28,7 +28,7 @@
               <div class="user1">
                 <div class="img1"></div>
                 <div class="main1">
-                  <div class="name1" data-is="print" label="Sachio Kobayashi">Sachio Kobayashi</div>
+                  <div class="name1" data-is="print" label="Sachio Kobayashi"><%= @user.name %></div>
                   <div class="follow1">
                     <a href="/follow1">フォロー</a>
                     <a href="/follower1">フォロワー</a>
