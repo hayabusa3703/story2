@@ -3,7 +3,6 @@ class UsersController < ApplicationController
 PROFILESTORYS = 6
 
   def index
-    @user = User.name
     @categorys = Category.all
     @storys = Story.page(params[:page]).per(PROFILESTORYS).by_created_at
   end
@@ -13,7 +12,6 @@ PROFILESTORYS = 6
   end
 
   def show
-    @name = current_user.nickname
     @categorys = Category.all
     @storys = Story.page(params[:page]).per(PROFILESTORYS).by_created_at
   end
