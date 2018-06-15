@@ -316,7 +316,7 @@ i {
   display: inline-block;
   background-repeat: no-repeat;
   background-position-y: 5px;
-  background-image: url(/images/layouts/arrow.png);
+  
 }
 
 [data-is="button-grd"] {
@@ -350,7 +350,7 @@ i {
   display: inline-block;
   background-repeat: no-repeat;
   background-position-y: 5px;
-  background-image: url(/images/layouts/arrow.png);
+  
 }
 
 span {
@@ -929,7 +929,7 @@ h4 {
 }
 
 .footer_arrow {
-  background-image: url(/images/layouts/arrow.png);
+  
   background-size: contain;
   background-repeat: no-repeat;
   height: 8px;
