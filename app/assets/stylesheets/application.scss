@@ -14,6 +14,16 @@
  *= require_self
  */
 
+@import "./categorys";
+@import "./comments";
+@import "./home";
+@import "./latest";
+@import "./legend";
+@import "./likes";
+@import "./new";
+@import "./newest";
+@import "./storys";
+
 
 * {
   box-sizing: border-box;
