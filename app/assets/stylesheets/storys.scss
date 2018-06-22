@@ -211,9 +211,9 @@
     }
   }
 }
-._popIn_recommend_container {
-    width: inherit;
-}
+// ._popIn_recommend_container {
+//     width: inherit;
+// }
 
 
 .story-add-engagement{
@@ -221,11 +221,6 @@
     padding: 20px;
     padding-top: 10px;
     background: #FFF;
-}
-
-[data-is="story-id-bookmark-form"] {
-
-
 }
 
 [data-is="story-id-bookmark-form"] > .inner {
@@ -243,7 +238,6 @@
     background-size: cover;
     background-position: center center;
     border-radius: 50%;
-    background-image: url('gokuuda.jpeg');
 }
 
 [data-is="story-id-bookmark-form"] > .inner > textarea{
