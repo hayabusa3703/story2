@@ -2,13 +2,11 @@ class LikesController < ApplicationController
   before_action :set_variables
 
   def like
-    like = current_user.likes.new(story_id: @story.id)
-    like.save
+    like = current_user.likes.create(story_id: @story.id)
   end
 
   def unlike
-    like = current_user.likes.find_by(story_id: @story.id)
-    like.destroy
+    like = current_user.likes.find_by(story_id: @story.id).destroy
   end
 
   private
