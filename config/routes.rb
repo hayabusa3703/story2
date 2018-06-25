@@ -20,6 +20,6 @@ Rails.application.routes.draw do
   resources :latest, only: [:index, :show]
   resources :legend, only: [:index, :show]
   resources :home,   only: [:index]
-  resources :likes, only: [:create, :destroy]
+  resources :likes,  only: [:create, :destroy]
 
 end
