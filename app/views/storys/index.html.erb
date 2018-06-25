@@ -67,6 +67,7 @@
               <div class = "inner" >
                <div class="icon"></div>
                <textarea>読んで良かったにコメントを添える...</textarea>
+               <%= render partial: 'storys/storys', collection: @storys, as: :story %>
               </div>
                 <i class = "fa fa-star"> </i>
            </div>
