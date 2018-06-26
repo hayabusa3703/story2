@@ -1,19 +1,25 @@
 class LikesController < ApplicationController
-   before_action :like_where, only: [:create, :destroy]
+  before_action :set_variables
+
 
   def create
-    @like = Like.create(user_id: current_user.id, story_id: params[:story_id])
-    @storys = Story.all
+    like = current_user.likes.create(story_id: @story.id)
   end
 
   def destroy
-    @like = Like.find_by(user_id: current_user.id, story_id: params[:story_id])
-    @like.destroy
-    @storys = Story.all
+    like = Like.where(story_id: @story.id, user_id: current_user.id)
+    like.destroy(like.ids)
   end
 
   private
-  def like_where
-    @likes = Like.where(story_id: params[:story_id])
+
+  def set_variables
+    if params[:format]
+      @story = Story.find(params[:format])
+    else
+      @story = Story.find(params[:id])
+    end
+    @id_name = "#like-link-#{@story.id}"
   end
+
 end

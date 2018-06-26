@@ -4,7 +4,6 @@ Rails.application.routes.draw do
   root 'application#index'
   resources :storys do
     resources :comments, only: [:create]
-    resources :likes, only: [:create, :destroy]
     resources :new, only: [:index, :new]
     member do
       delete :destroy
@@ -21,4 +20,6 @@ Rails.application.routes.draw do
   resources :latest, only: [:index, :show]
   resources :legend, only: [:index, :show]
   resources :home,   only: [:index]
+  resources :likes,  only: [:create, :destroy]
+
 end
