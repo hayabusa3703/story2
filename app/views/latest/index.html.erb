@@ -11,7 +11,7 @@
           <div class="story-list clearfix">
             <%= render partial: "latest/story-box", collection: @storys, as:"story" %>
           </div>
-          <%= render 'layouts/pagenation' %>
+          <div data-is="category__paginate"><%= paginate(@storys) %></div>
           <%= render 'layouts/recommend' %>
         </div>
         <%= render 'latest/rightside' %>
