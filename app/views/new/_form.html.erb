@@ -3,7 +3,7 @@
   <div class="form_fields">
     <%= form_for @story, url: storys_path do |f| %>
     <div class="category_wrapper js-category-label">
-      <div class="category_field" data-is="print_field" label="ここをクリックしてカテゴリを選択">ここをクリックしてカテゴリを選択(ここを本当はjsでやりたい^^;)</div>
+      <div class="category_field" data-is="print_field" label="ここをクリックしてカテゴリを選択">ここをクリックしてカテゴリを選択</div>
       <div class="fa fa-pencil"></div><%= f.collection_select :category_id, Category.all, :id, :name %>
     </div>
     <div class="title">
