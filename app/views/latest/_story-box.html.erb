@@ -2,7 +2,7 @@
     <span class="name"></span>
     <%= link_to(story_path(story), class: 'wall', style: "background-image: url(https://img.sty.fun/t/uploads/user/wall/5126/cc0ee168.jpeg);") do %><% end %>
   <div class="category">
-    <a data-is="print" class="category__label study category__label__after" href="/category/120" label="勉強">勉強</a>
+    <div data-is="print" class="category__label study category__label__after" href="/category/120" label="勉強" style="background-color: <%= story.category.color %>;"><%= story.category.name %></div>
   </div>
     <%= link_to(story_path(story), class: 'wrapper') do %>
     <div class="top clearfix">
