@@ -21,9 +21,16 @@
           <div class="header-menu">
             <div class="inner clearfix">
               <div class="dropdown">
-                <%= image_tag "https://img.sty.fun/t/uploads/user/second_image/173010/d760dce0.jpeg?ds=s&amp;of=jpg&amp;dw=40&amp;dh=40&amp;da=s&amp;cw=40&amp;ch=40", class: "people-img" %>
+                <% if user_signed_in? %>
+                  <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+                    <% else %>
+                  <%= link_to "ログイン", new_user_session_path, class: 'post' %>
+                  <%= link_to "新規登録", new_user_registration_path, class: 'post' %>
+                <% end %>
               </div>
-              <%= link_to "yoshimitsu egashira", home_index_path, class: "name"%>
+                <% if user_signed_in? %>
+                <%= link_to "#{current_user.name}", home_index_path, class: "name"%>
+                <% end %>
             </div>
           </div>
         </div>
