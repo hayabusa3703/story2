@@ -11,7 +11,11 @@ users_view_csv.shift
 users_view_csv.each do |row|
   User.create(email: row[1], encrypted_pass: row[2], reser_password_token: row[3], sign_in_count: row[4], current_sign_in_at: row[5], last_sign_in_at: row[6], current_sign_in_ip: row[7], last_sign_in_ip: row[8], created_at: row[9], updated_at: row[10], name: row[11])
 end
-
+comments_csv = CSV.readlines("db/comments_view.csv")
+comments_view_csv.shift
+comments_view_csv.each do |row|
+  Comment.create(text: row[1], story_id: row[2], user_id: row[3], created_at: row[4], updated_at: row[5])
+end
 
 
 # This file should contain all the record creation needed to seed the database with its default values.
