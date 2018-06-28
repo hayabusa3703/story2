@@ -6,7 +6,11 @@ categories_view_csv.each do |row|
   Category.create(image: row[1], created_at: row[2], updated_at: row[3], name: row[4], color: row[5])
   # idを除くカラム名を記述する
 end
-
+users_view_csv = CSV.readlines("db/users_view.csv")
+users_view_csv.shift
+users_view_csv.each do |row|
+  User.create(email: row[1], encrypted_pass: row[2], reser_password_token: row[3], sign_in_count: row[4], current_sign_in_at: row[5], last_sign_in_at: row[6], current_sign_in_ip: row[7], last_sign_in_ip: row[8], created_at: row[9], updated_at: row[10], name: row[11])
+end
 
 
 

@@ -1,0 +1,2 @@
+"id","email","encrypted_password","reset_password_token","reset_password_sent_at","remember_created_at","sign_in_count","current_sign_in_at","last_sign_in_at","current_sign_in_ip","last_sign_in_ip","created_at","updated_at","name"
+1,"jiro@jiro.com","$2a$11$ucbvRDTtRZ25HrI1Wm1MfugvpXXifjcP2GqGGFnDE1IocjfKNw8UG",NULL,NULL,NULL,1,"2018-05-21 09:43:04","2018-05-21 09:43:04","127.0.0.1","127.0.0.1","2018-05-21 09:43:04","2018-05-21 09:43:04",NULL
