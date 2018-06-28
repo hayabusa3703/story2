@@ -178,7 +178,7 @@
     width: 40px;
     height: 10px;
     margin: 1px 0 0 4px;
-    background-image: url(//api.popin.cc/images/logo.png);
+    // background-image: url(//api.popin.cc/images/logo.png);
     background-repeat: no-repeat;
     background-position: 0px 0px;
     background-size: 40px 20px;
@@ -186,3 +186,73 @@
     }
   }
 }
+[data-is="category__paginate"] {
+  padding-bottom: 40px;
+  margin-left: 80px;
+}
+
+[data-is="category__paginate"] > nav > span {
+  display: inherit;
+}
+
+.pagination {
+  .first{
+    a{
+      font-size: 12px;
+      border: 1px solid #736335;
+      color: #736335;
+      padding: 10px 15px;
+      text-decoration: none;
+      float: left;
+    }
+  }
+  .prev{
+    a{
+      font-size: 12px;
+      border: 1px solid #736335;
+      color: #736335;
+      padding: 10px 15px;
+      text-decoration: none;
+      float: left;
+     }
+   }
+  .next{
+    a{
+      font-size: 12px;
+      border: 1px solid #736335;
+      color: #736335;
+      padding: 10px 15px;
+      text-decoration: none;
+      float: left;
+     }
+   }
+
+  .last{
+    a{
+      font-size: 12px;
+      border: 1px solid #736335;
+      color: #736335;
+      padding: 10px 15px;
+      text-decoration: none;
+      float: left;
+     }
+   }
+  .page.current{
+   color: #FFF;
+   font-size: 12px;
+   border: 1px solid #736335;
+   background: #938355;
+   padding: 10px 15px;
+   float: left;
+  }
+  .page{
+    a{
+      font-size: 12px;
+      border: 1px solid #736335;
+      color: #736335;
+      padding: 10px 15px;
+      text-decoration: none;
+      float: left;
+     }
+   }
+ }
