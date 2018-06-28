@@ -39,7 +39,7 @@
               </div>
               <div class="menus">
                 <div class="wrapper2 clearfix">
-                  <a class="active2" href="/user/6120f37b0dc85dee510b/">
+                  <a class="active2" href="/users/<%= current_user.id %>">
                     <span class = "active2__story" data-is="print" label="ストーリー">ストーリー</span>
                   </a>
                   <a class="bookmark2" href="/user/6120f37b0dc85dee510b/bookmark/">
@@ -52,7 +52,7 @@
         </div>
           <div class="story-list clearfix">
             <!-- ストーリーボックスの中身 -->
-            <%= render partial: 'home/story-box', collection: @storys, as: "story" %>
+            <%= render partial: 'application/story-box', collection: @storys, as: "story" %>
             <!-- ストーリーボックスの中身 -->
           </div>
       </div>

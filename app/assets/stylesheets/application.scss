@@ -107,7 +107,6 @@ form {
   left: 10px;
   top: 5px;
   color: #e88e00;
-  position: absolute;
 }
 
 .input-search {
@@ -152,6 +151,7 @@ form {
   float: right;
   text-align: right;
   position: relative;
+  margin-top: 3px;
 }
 
 .people-img {
@@ -167,7 +167,7 @@ form {
   display: block;
   font-size: 13px;
   line-height: 32px;
-  padding-right: 50px;
+  padding-right: 30px;
   text-decoration: none;
   color: white;
 }
@@ -647,7 +647,6 @@ button {
   text-decoration: none;
   width: 75px;
   text-align: center;
-  background: linear-gradient(to right top, #666, #555);
   box-shadow: 0 1px 3px 0px rgba(1, 1, 1, 0.4);
   border-radius: 2px 2px 2px 0;
 }
