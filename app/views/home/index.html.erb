@@ -28,12 +28,12 @@
               <div class="user1">
                 <%= image_tag "https://pbs.twimg.com/profile_images/907571420716187648/4dyHswVJ_400x400.jpg", class: "img1" %>
                 <div class="main1">
-                  <div class="name1" data-is="print" label="Sachio Kobayashi">Sachio Kobayashi</div>
+                  <div class="name1" data-is="print" label="Sachio Kobayashi"><%= current_user.name %></div>
                   <div class="follow1">
                     <a href="/follow1">フォロー</a>
                     <a href="/follower1">フォロワー</a>
                   </div>
-                  <div class="description1" data-is="print" label="Sachio Kobayashiさんの人生のストーリー">Sachio Kobayashiさんの人生のストーリー
+                  <div class="description1" data-is="print" label="Sachio Kobayashiさんの人生のストーリー"><%= current_user.name %>さんの人生のストーリー
                   </div>
                 </div>
               </div>
