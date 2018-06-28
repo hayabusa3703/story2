@@ -21,5 +21,5 @@ Rails.application.routes.draw do
   resources :legend, only: [:index, :show]
   resources :home,   only: [:index]
   resources :likes,  only: [:create, :destroy]
-
+  resources :users,  only: [:show]
 end

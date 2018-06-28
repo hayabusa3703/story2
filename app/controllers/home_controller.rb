@@ -8,3 +8,4 @@ PROFILESTORYS = 6
     @storys = Story.page(params[:page]).per(PROFILESTORYS).by_created_at
   end
 end
+

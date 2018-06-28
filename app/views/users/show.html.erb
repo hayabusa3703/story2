@@ -1,0 +1,63 @@
+<%= render 'application/titlebar'%>
+<div class="container-latest">
+  <%= render 'application/toolbar'%>
+  <div class="main">
+    <div class="contents">
+      <div class="contents-container clearfix">
+        <div data-is="user-id">
+          <div class="global-box">
+            <div class="wall">
+              <div class="tool">
+                <div class="message">
+                  <a href="">
+                    <i class="fa fa-envelope-o"></i><!-- 未実装の機能のため今後リンク先を追加する予定です。-->
+                  </a>
+                </div>
+                <div class="follow">
+                  <div id="js-follow-user-172997">
+                    <div id="follow_button">
+                      <%= link_to "プロフィールを編集", class: "button ui mini primary"%>
+                        <span class = "profile__edit"></span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="wrapper1">
+              <div class="user1">
+                <%= image_tag "https://pbs.twimg.com/profile_images/907571420716187648/4dyHswVJ_400x400.jpg", class: "img1" %>
+                <div class="main1">
+                  <div class="name1" data-is="print" label="Sachio Kobayashi"><%= current_user.name %></div>
+                  <div class="follow1">
+                    <a href="/follow1">フォロー</a>
+                    <a href="/follower1">フォロワー</a>
+                  </div>
+                  <div class="description1" data-is="print" label="Sachio Kobayashiさんの人生のストーリー"><%= current_user.name %>さんの人生のストーリー
+                  </div>
+                </div>
+              </div>
+              <div class="menus">
+                <div class="wrapper2 clearfix">
+                  <a class="active2" href="/user/6120f37b0dc85dee510b/">
+                    <span class = "active2__story" data-is="print" label="ストーリー">ストーリー</span>
+                  </a>
+                  <a class="bookmark2" href="/user/6120f37b0dc85dee510b/bookmark/">
+                    <span class = "bookmark2__text" data-is="print" label="ブックマーク">ブックマーク</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+          <div class="story-list clearfix">
+            <!-- ストーリーボックスの中身 -->
+            <%= render partial: 'application/story-box', collection: @storys, as: "story" %>
+            <!-- ストーリーボックスの中身 -->
+          </div>
+      </div>
+    </div>
+    <div data-is="home__paginate"><%= paginate(@storys) %></div>
+    <%= render 'application/footer' %>
+  </div>
+</div>
