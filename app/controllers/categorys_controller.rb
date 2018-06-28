@@ -16,5 +16,6 @@ class CategorysController < ApplicationController
 
     def set_sort
       @storys = Story.where(category_id: params[:id])
+      @story = Story.all.page(params[:page]).per(2).order('created_at DESC')
     end
 end

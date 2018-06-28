@@ -1,16 +1,6 @@
 <div class="ajax-index-category">
   <div category_name="カタリエ" category_slug="katarie" class="katarie-wrapper" data-is="pages-index-bottom-category">
     <div class="inner">
-      <div class="ajax-container">
-        <h1>カタリエのストーリー</h1>
-        <div class="story-list clearfix">
-          <%= render 'application/genre_story-box' %>
-        </div>
-          <%= link_to "#{ @categorys.name }のストーリー一欄", category_path(@categorys), class: "catebtn" %>
-          <i class="fa-arrow-circle-right fa"></i>
-      </div>
-    </div>
-  </div>
 
 <% @categorys.each do |category| %>
   <div category_name="恋愛" category_slug="love" data-is="pages-index-bottom-category">
