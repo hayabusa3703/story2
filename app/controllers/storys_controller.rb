@@ -12,8 +12,7 @@ class StorysController < ApplicationController
 
 
   def show
-    # @comments = @story.comments.includes(:user)
-    # @comment = Comment.new
+
   end
 
   def new
