@@ -74,12 +74,21 @@
       <div class="contents-container clearfix">
         <div class="layout-column-main">
           <div class="story-add-engagement">
-            <%= render partial: 'likes/like', locals: {story: @story} %>
             <h3 class="h3-global">みんなの読んで良かった！</h3>
+            <%= render partial: 'likes/like', locals: {story: @story} %>
             <div data-is="story-id-bookmark-form" >
               <div class = "inner" >
                <div class="icon"></div>
               </div>
+                 <div class="comments">
+                   <%= form_for [@story, @comment] do |f| %>
+                    <%= f.text_field :text, placeholder: "コメントを書いてね！" %>
+                    <%= f.submit "送信"%>
+                   <% end %>
+                <h3>＜コメント一覧＞</h3>
+                 <%= render partial: 'comments', collection: @comments %>
+                 </div>
+                <!-- <i class = "fa fa-star"></i> -->
             </div>
           </div>
         </div>
