@@ -7,6 +7,9 @@ class CategorysController < ApplicationController
     @storys = Story.where(category_id: params[:id]).order("created_at DESC")
   end
 
+  def show
+  end
+
   private
 
     def set_category
@@ -15,7 +18,6 @@ class CategorysController < ApplicationController
     end
 
     def set_sort
-      @storys = Story.where(category_id: params[:id])
-      @story = Story.all.page(params[:page]).per(2).order('created_at DESC')
+      @storys = Story.where(category_id: params[:id]).page(params[:page]).per(2).order('created_at ASC')
     end
 end
