@@ -1,10 +1,14 @@
 class CategorysController < ApplicationController
 
-  before_action :set_category, only: [:index, :show, :newest]
+  before_action :set_category, only: [:index, :show, :newest, :oldest]
   before_action :set_sort, only: [:index, :show]
 
   def newest
     @storys = Story.where(category_id: params[:id]).order("created_at DESC")
+  end
+
+  def oldest
+    @storys = Story.where(category_id: params[:id]).order("created_at ASC")
   end
 
   private

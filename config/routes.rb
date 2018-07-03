@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   resources :categorys , only: [:index, :show] do
     member do
       get :newest
+      get :oldest
     end
   end
 
