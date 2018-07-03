@@ -13,26 +13,24 @@
         <div class="layout-column-main">
           <div class="order-main">
             <div class="order-menus">
-              <a href="/">
-                <span data-is="raw" content="人気">人気</span>
-              </a>
-              <a href="/">
-                <span data-is="raw" content="新着">
+                <span data-is="raw" content="人気">
+                  <%= link_to "人気" %>
+                </span>
+                <span class="active" data-is="raw" content="新着">
                   <%= link_to '新着', newest_category_path(@category) %>
                 </span>
-              </a>
-              <a class="active" href="/">
-                <span data-is="raw" content="昔の投稿">昔の投稿</span>
-              </a>
+                <span data-is="raw" content="昔の投稿">
+                  <%= link_to '昔の投稿', oldest_category_path(@category) %>
+                </span>
             </div>
           </div>
           <div class="story-list clearfix">
-            <!-- ストーリーボックスの中身 -->
             <%= render 'categorys/category-story-box'%>
-            <!-- ストーリーボックスの中身 -->
           </div>
-          <%= render 'layouts/pagenation' %>
-          <%= render 'layouts/recommend'%>
+          <div data-is="category__paginate">
+
+          </div>
+          <%= render 'layouts/recommend' %>
         </div>
           <div class="all-count">
             全 <span> 000 </span> ストーリー
