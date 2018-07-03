@@ -1,19 +1,31 @@
-<div class="ajax-index-category">
-  <div category_name="カタリエ" category_slug="katarie" class="katarie-wrapper" data-is="pages-index-bottom-category">
-    <div class="inner">
-
-<% @categorys.each do |category| %>
+<% @love.each do |category| %>
+<div class="inner">
   <div category_name="恋愛" category_slug="love" data-is="pages-index-bottom-category">
     <div class="inner">
       <div class="ajax-container">
-        <h1><%= category.name %>のストーリー</h1>
+        <h1>恋愛のストーリー</h1>
         <div class="story-list clearfix">
-          <%= render 'application/genre_story-box'%>
+           <%= render 'application/genre_story-box' %>
         </div>
-          <%= link_to "#{ category.name }のストーリー一欄", category_path(category), class: "catebtn" %>
-          <i class="fa-arrow-circle-right fa"></i>
+          <%= link_to "恋愛のストーリー一欄", category_path(category.category_id), class: "catebtn" %>
       </div>
     </div>
   </div>
-<% end %>
+ <% end %>
+</div>
+
+<% @marriage.each do |category| %>
+<div class="inner">
+  <div category_name="恋愛" category_slug="love" data-is="pages-index-bottom-category">
+    <div class="inner">
+      <div class="ajax-container">
+        <h1>結婚のストーリー</h1>
+        <div class="story-list clearfix">
+           <%= render 'application/genre_story-box2' %>
+        </div>
+          <%= link_to "結婚のストーリー一欄", category_path(category.category_id), class: "catebtn" %>
+      </div>
+    </div>
+  </div>
+  <% end %>
 </div>
