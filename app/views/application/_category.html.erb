@@ -13,10 +13,9 @@
   </div>
  <% end %>
 </div>
-
 <% @marriage.each do |category| %>
 <div class="inner">
-  <div category_name="恋愛" category_slug="love" data-is="pages-index-bottom-category">
+  <div category_name="結婚" category_slug="marriage" data-is="pages-index-bottom-category">
     <div class="inner">
       <div class="ajax-container">
         <h1>結婚のストーリー</h1>
@@ -24,6 +23,36 @@
            <%= render 'application/genre_story-box2' %>
         </div>
           <%= link_to "結婚のストーリー一欄", category_path(category.category_id), class: "catebtn" %>
+      </div>
+    </div>
+  </div>
+  <% end %>
+</div>
+<% @study.each do |category| %>
+<div class="inner">
+  <div category_name="勉強" category_slug="study" data-is="pages-index-bottom-category">
+    <div class="inner">
+      <div class="ajax-container">
+        <h1>勉強のストーリー</h1>
+        <div class="story-list clearfix">
+           <%= render 'application/genre_story-box3' %>
+        </div>
+          <%= link_to "勉強のストーリー一欄", category_path(category.category_id), class: "catebtn" %>
+      </div>
+    </div>
+  </div>
+  <% end %>
+</div>
+<% @job.each do |category| %>
+<div class="inner">
+  <div category_name="仕事" data-is="pages-index-bottom-category">
+    <div class="inner">
+      <div class="ajax-container">
+        <h1>仕事のストーリー</h1>
+        <div class="story-list clearfix">
+           <%= render 'application/genre_story-box4' %>
+        </div>
+          <%= link_to "仕事のストーリー一欄", category_path(category.category_id), class: "catebtn" %>
       </div>
     </div>
   </div>
