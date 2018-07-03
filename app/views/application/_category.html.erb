@@ -7,7 +7,7 @@
         <div class="story-list clearfix">
            <%= render 'application/genre_story-box' %>
         </div>
-          <%= link_to "恋愛のストーリー一欄", category_path(category.category_id), class: "catebtn" %>
+          <%= link_to "恋愛のストーリー一覧", category_path(category.category_id), class: "catebtn" %>
       </div>
     </div>
   </div>
@@ -22,7 +22,7 @@
         <div class="story-list clearfix">
            <%= render 'application/genre_story-box2' %>
         </div>
-          <%= link_to "結婚のストーリー一欄", category_path(category.category_id), class: "catebtn" %>
+          <%= link_to "結婚のストーリー一覧", category_path(category.category_id), class: "catebtn" %>
       </div>
     </div>
   </div>
@@ -37,7 +37,7 @@
         <div class="story-list clearfix">
            <%= render 'application/genre_story-box3' %>
         </div>
-          <%= link_to "勉強のストーリー一欄", category_path(category.category_id), class: "catebtn" %>
+          <%= link_to "勉強のストーリー一覧", category_path(category.category_id), class: "catebtn" %>
       </div>
     </div>
   </div>
@@ -52,7 +52,37 @@
         <div class="story-list clearfix">
            <%= render 'application/genre_story-box4' %>
         </div>
-          <%= link_to "仕事のストーリー一欄", category_path(category.category_id), class: "catebtn" %>
+          <%= link_to "仕事のストーリー一覧", category_path(category.category_id), class: "catebtn" %>
+      </div>
+    </div>
+  </div>
+  <% end %>
+</div>
+<% @newlife.each do |category| %>
+<div class="inner">
+  <div category_name="新生活" data-is="pages-index-bottom-category">
+    <div class="inner">
+      <div class="ajax-container">
+        <h1>新生活のストーリー</h1>
+        <div class="story-list clearfix">
+           <%= render 'application/genre_story-box5' %>
+        </div>
+          <%= link_to "新生活のストーリー一覧", category_path(category.category_id), class: "catebtn" %>
+      </div>
+    </div>
+  </div>
+  <% end %>
+</div>
+<% @travel.each do |category| %>
+<div class="inner">
+  <div category_name="旅行" data-is="pages-index-bottom-category">
+    <div class="inner">
+      <div class="ajax-container">
+        <h1>旅行のストーリー</h1>
+        <div class="story-list clearfix">
+           <%= render 'application/genre_story-box6' %>
+        </div>
+          <%= link_to "旅行のストーリー一覧", category_path(category.category_id), class: "catebtn" %>
       </div>
     </div>
   </div>
