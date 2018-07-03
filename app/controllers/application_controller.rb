@@ -18,6 +18,10 @@ class ApplicationController < ActionController::Base
     @newlife = Story.where(Category_id: 5).limit(1)
     @travels = Story.where(Category_id: 6).limit(CATEGORYSTORYS)
     @travel = Story.where(Category_id: 6).limit(1)
+    @sicks = Story.where(Category_id: 7).limit(CATEGORYSTORYS)
+    @sick = Story.where(Category_id: 7).limit(1)
+    @everydaylifes = Story.where(Category_id: 8).limit(CATEGORYSTORYS)
+    @everydaylife = Story.where(Category_id: 8).limit(1)
   end
 
 	before_action :configure_permitted_parameters, if: :devise_controller?

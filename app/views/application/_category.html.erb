@@ -88,3 +88,33 @@
   </div>
   <% end %>
 </div>
+<% @sick.each do |category| %>
+<div class="inner">
+  <div category_name="病気" data-is="pages-index-bottom-category">
+    <div class="inner">
+      <div class="ajax-container">
+        <h1>病気のストーリー</h1>
+        <div class="story-list clearfix">
+           <%= render 'application/genre_story-box7' %>
+        </div>
+          <%= link_to "病気のストーリー一覧", category_path(category.category_id), class: "catebtn" %>
+      </div>
+    </div>
+  </div>
+  <% end %>
+</div>
+<% @everydaylife.each do |category| %>
+<div class="inner">
+  <div category_name="日常生活" data-is="pages-index-bottom-category">
+    <div class="inner">
+      <div class="ajax-container">
+        <h1>日常生活のストーリー</h1>
+        <div class="story-list clearfix">
+           <%= render 'application/genre_story-box8' %>
+        </div>
+          <%= link_to "日常生活のストーリー一覧", category_path(category.category_id), class: "catebtn" %>
+      </div>
+    </div>
+  </div>
+  <% end %>
+</div>
