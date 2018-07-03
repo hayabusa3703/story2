@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .container-latest {
-  padding-top: 90px;
+  padding-top: 100px;
   height: 100vh;
 }
 
@@ -41,7 +41,28 @@
 }
 
 .order-menus {
-  float: right;
+  float: left;
+  display: inline-block;
+  border: 1px solid #b1aa99;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.order-menus a {
+  font-size: 13px;
+  text-decoration: none;
+  line-height: 30px;
+  display: inline-block;
+  border-right: 1px solid #b1aa99;
+  background: transparent;
+  padding: 0 20px;
+  color:#5c3617;
+  font-weight: normal;
+}
+
+.order-menus span.active a {
+  background-color: #585245;
+  color: white;
 }
 
 .layout-column-main {
@@ -229,7 +250,7 @@
       width: 40px;
       height: 10px;
       margin: 1px 0 0 4px;
-      background-image: url(//api.popin.cc/images/logo.png);
+      // background-image: url(//api.popin.cc/images/logo.png);
       background-repeat: no-repeat;
       background-position: 0px 0px;
       background-size: 40px 20px;
