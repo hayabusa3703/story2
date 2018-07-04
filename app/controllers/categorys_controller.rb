@@ -1,6 +1,6 @@
 class CategorysController < ApplicationController
 
-  before_action :set_category, only: [:index, :show, :newest, :oldest]
+  before_action :set_category, only: [:index, :show, :newest, :oldest, :popular]
   before_action :set_sort, only: [:index, :show]
 
   def newest
@@ -9,6 +9,10 @@ class CategorysController < ApplicationController
 
   def oldest
     @storys = Story.where(category_id: params[:id]).order("created_at ASC")
+  end
+
+  def popular
+    @storys = Story.where(category_id: params[:id]).order("likes_count DESC")
   end
 
   private

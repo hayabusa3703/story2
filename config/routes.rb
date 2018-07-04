@@ -14,6 +14,7 @@ Rails.application.routes.draw do
     member do
       get :newest
       get :oldest
+      get :popular
     end
   end
 

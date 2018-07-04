@@ -14,7 +14,7 @@
           <div class="order-main">
             <div class="order-menus">
                 <span data-is="raw" content="人気">
-                  <%= link_to "人気" %>
+                  <%= link_to "人気", popular_category_path(@category) %>
                 </span>
                 <span class="active" data-is="raw" content="新着">
                   <%= link_to '新着', newest_category_path(@category) %>
