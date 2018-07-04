@@ -1,14 +1,16 @@
 class CategorysController < ApplicationController
 
+  CATEGORY_STORIES_COUNT = 12
+
   before_action :set_category, only: [:index, :show, :newest, :oldest, :popular]
   before_action :set_sort, only: [:index, :show, :newest]
 
   def oldest
-    @storys = Story.where(category_id: params[:id]).page(params[:page]).per(12).order('created_at ASC')
+    @storys = Story.where(category_id: params[:id]).page(params[:page]).per(CATEGORY_STORIES_COUNT).order('created_at ASC')
   end
 
   def popular
-    @storys = Story.where(category_id: params[:id]).page(params[:page]).per(12).order('likes_count DESC')
+    @storys = Story.where(category_id: params[:id]).page(params[:page]).per(CATEGORY_STORIES_COUNT).order('likes_count DESC')
   end
 
   private
@@ -19,6 +21,6 @@ class CategorysController < ApplicationController
     end
 
     def set_sort
-      @storys = Story.where(category_id: params[:id]).page(params[:page]).per(12).order('created_at DESC')
+      @storys = Story.where(category_id: params[:id]).page(params[:page]).per(CATEGORY_STORIES_COUNT).order('created_at DESC')
     end
 end
