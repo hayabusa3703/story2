@@ -853,12 +853,7 @@ h4 {
   padding-top: 5px;
 }
 
-.ajax-index-category {}
-
-.inner {
-}
-
-.ajax-container {
+.story__container {
   position: relative;
   padding-bottom: 20px;
   margin: 0 auto;
@@ -866,7 +861,7 @@ h4 {
   width: 1088px;
 }
 
-.ajax-container h1 {
+.story__container h1 {
   font-size: 18px;
   font-weight: bold;
   color: #3A220A;
@@ -881,7 +876,7 @@ h4 {
     background: rgba(255, 255, 255, 0.4);
 }
 
-[data-is="pages-index-bottom-category"] > .inner > .ajax-container > .catebtn {
+[data-is="pages-index-bottom-category"] > .story__container > .catebtn {
   width: 220px;
   height: 30px;
   box-sizing: border-box;
@@ -897,7 +892,7 @@ h4 {
   background: #FFF -webkit-linear-gradient(left, #FF8300, #FFA900);
 }
 
-[data-is="pages-index-bottom-category"] .inner > .ajax-container > .catebtn > i {
+[data-is="pages-index-bottom-category"] > .story__container > .catebtn > i {
   font-size: 16px;
   position: absolute;
   top: 6px;
