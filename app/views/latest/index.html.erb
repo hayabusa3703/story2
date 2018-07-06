@@ -9,7 +9,7 @@
             <i class="fa fa-flash"></i>
             新着のストーリー</h1>
           <div class="story-list clearfix">
-            <%= render partial: "latest/story-box", collection: @storys, as:"story" %>
+            <%= render partial: "application/story-box", collection: @storys, as:"story" %>
           </div>
           <div data-is="category__paginate"><%= paginate(@storys) %></div>
           <%= render 'layouts/recommend' %>
