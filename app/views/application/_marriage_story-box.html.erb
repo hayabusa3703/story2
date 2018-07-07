@@ -1,15 +1,14 @@
 <% @marriages.each do |marriage| %>
   <div class="story-box">
-    <span class="name"></span>
     <%= link_to(story_path(marriage), class: 'wall', style: "background-image: url(https://img.sty.fun/t/uploads/user/wall/5126/cc0ee168.jpeg);") do %><% end %>
-  <div class="category">
-    <div data-is="print" class="category__label love category__label__after" href="/category/120" label="<%= marriage.category.name %>" style="background-color: <%= marriage.category.color %>;"><%= marriage.category.name %>
+  <div class="category__name">
+    <div data-is="print" class="category__label" label="<%= marriage.category.name %>" style="background-color: <%= marriage.category.color %>;"><%= marriage.category.name %>
     </div>
   </div>
   <%= link_to(story_path(marriage), class: 'wrapper') do %>
     <div class="top clearfix">
-      <div class="left">
-        <div class="left img" style="background-image: url(https://graph.facebook.com/727353672/picture?width=400&amp;height=400);"></div>
+      <div class="leftside">
+        <div class="leftside__image" style="background-image: url(https://graph.facebook.com/727353672/picture?width=400&amp;height=400);"></div>
       </div>
       <div class="right-area">
         <div class="right-user">
@@ -30,25 +29,19 @@
     <div>
       <div data-is="story-box-users" bookmark_counter="22">
         <div class="users-wrapper">
-          <div class="users">
-            <img src="">
-            <img src="">
-            <img src="">
-            <img src="">
-          </div>
-          <div class="text">
-            <div class="num" data-is="print" label="○○人の"><%= marriage.likes_count %>人の</div>
+          <div class="likes-text">
+            <div class="likes-count" data-is="print" label="人の"><%= marriage.likes_count %>人の</div>
             <div class="sub_text">読んでよかった！！</div>
           </div>
         </div>
       </div>
       <div data-is="story-box-comment">
         <div class="users-wrapper clearfix">
-          <div class="left">
-            <div class="img" style="background-image: url(https://graph.facebook.com/100002151358967/picture?width=400&amp;height=400);" title="内藤 涼子"></div>
+          <div class="leftside">
+            <div class="leftside__image" style="background-image: url(https://graph.facebook.com/100002151358967/picture?width=400&amp;height=400);" title="内藤 涼子"></div>
           </div>
-          <div class="body">
-            <div class="inner" data-is="print" label=""></div>
+          <div class="story-box__body">
+            <div class="story-box__inner" data-is="print" label=""></div>
           </div>
         </div>
       </div>
