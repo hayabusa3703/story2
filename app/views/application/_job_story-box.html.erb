@@ -1,6 +1,6 @@
 <% @jobs.each do |job| %>
-  <div class="story-box">
-    <%= link_to(story_path(job), class: 'wall', style: "background-image: url(https://img.sty.fun/t/uploads/user/wall/5126/cc0ee168.jpeg);") do %><% end %>
+ <div class="story-box">
+  <%= link_to "", story_path(job),class: 'wall', style: "background-image: url(https://img.sty.fun/t/uploads/user/wall/5126/cc0ee168.jpeg);"%>
   <div class="category__name">
     <div data-is="print" class="category__label" label="<%= job.category.name %>" style="background-color: <%= job.category.color %>;"><%= job.category.name %>
     </div>

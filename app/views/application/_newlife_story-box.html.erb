@@ -1,6 +1,6 @@
 <% @newlifes.each do |newlife| %>
-  <div class="story-box">
-    <%= link_to(story_path(newlife), class: 'wall', style: "background-image: url(https://img.sty.fun/t/uploads/user/wall/5126/cc0ee168.jpeg);") do %><% end %>
+ <div class="story-box">
+  <%= link_to "", story_path(newlife),class: 'wall', style: "background-image: url(https://img.sty.fun/t/uploads/user/wall/5126/cc0ee168.jpeg);"%>
   <div class="category__name">
     <div data-is="print" class="category__label" label="<%= newlife.category.name %>" style="background-color: <%= newlife.category.color %>;"><%= newlife.category.name %>
     </div>

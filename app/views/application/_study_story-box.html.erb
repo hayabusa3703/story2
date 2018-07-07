@@ -1,6 +1,6 @@
 <% @studies.each do |study| %>
   <div class="story-box">
-    <%= link_to(story_path(study), class: 'wall', style: "background-image: url(https://img.sty.fun/t/uploads/user/wall/5126/cc0ee168.jpeg);") do %><% end %>
+   <%= link_to "", story_path(study),class: 'wall', style: "background-image: url(https://img.sty.fun/t/uploads/user/wall/5126/cc0ee168.jpeg);"%>
   <div class="category__name">
     <div data-is="print" class="category__label" label="<%= study.category.name %>" style="background-color: <%= study.category.color %>;"><%= study.category.name %>
     </div>
