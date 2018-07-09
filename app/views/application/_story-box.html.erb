@@ -13,7 +13,7 @@
         <div class="right-user">
           <div class="story-name" data-is="print" label="user_name"><%= story.user.name %></div>
         </div>
-        <div class="reading-time">4 min read</div>
+        <div class="reading-time"><span><%= time_ago_in_words(story.created_at) %></span> read</div>
         <div class="right-area clearfix"></div>
         <h3 class="topic">
           <span><p><%= story.title %></p></span>
@@ -40,11 +40,11 @@
             <div class="leftside__image" style="background-image: url(https://graph.facebook.com/100002151358967/picture?width=400&amp;height=400);" title="内藤 涼子"></div>
           </div>
           <div class="story-box__body">
-            <div class="story-box__inner" data-is="print" label=""></div>
+            <div class="story-box__inner" data-is="print" label="">
+            </div>
           </div>
         </div>
       </div>
     </div>
   <% end %>
-  </div>
-
+</div>
