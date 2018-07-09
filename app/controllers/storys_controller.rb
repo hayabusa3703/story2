@@ -4,6 +4,7 @@ class StorysController < ApplicationController
   before_action :set_story, only: [:show, :edit]
   before_action :set_category, only: [:index, :new, :create, :show]
   before_action :story_find, only: [:destroy, :edit, :update]
+  before_action :direct, only: [:edit]
   CURRENTSTORYS = 1
 
   def index
@@ -55,5 +56,13 @@ class StorysController < ApplicationController
 
   def set_story
     @story = Story.find(params[:id])
+  end
+
+  def direct
+    if current_user.id != @story.id
+      redirect_to root_path
+      # もし、今ログインしているユーザーと編集をしようと思っているストーリーのidが一致しなければ
+      # トップページに戻るという処理
+    end
   end
 end
