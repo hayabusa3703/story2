@@ -13,20 +13,22 @@
         <div class="layout-column-main">
           <div class="order-main">
             <div class="order-menus">
-              <%= link_to "人気" %>
-                <span data-is="raw" content="人気"></span>
+                <span data-is="raw" content="人気">
+                  <%= link_to "人気", popular_category_path(@category) %>
+                </span>
                 <span data-is="raw" content="新着">
                   <%= link_to '新着', newest_category_path(@category) %>
                 </span>
-                  <%= link_to '昔の投稿' %>
-                <span data-is="raw" content="昔の投稿"></span>
+                <span data-is="raw" content="昔の投稿">
+                  <%= link_to '昔の投稿', oldest_category_path(@category) %>
+                </span>
             </div>
           </div>
           <div class="story-list clearfix">
             <%= render partial: "application/story-box", collection: @storys, as:"story" %>
           </div>
           <div data-is="category__paginate">
-            <%= paginate(@story) %>
+            <%= paginate(@storys) %>
           </div>
           <%= render 'layouts/recommend' %>
         </div>
