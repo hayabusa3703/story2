@@ -1,8 +1,8 @@
 <div class="contents row">
   <%= form_for @story, url: story_path do |f| %>
     <h3>編集する</h3>
-    <%= f.text_field :title, placeholder: "#{ @story.title }" %>
-    <%= f.text_field :text, placeholder: "#{ @story.text }" %>
-    <%= f.submit "更新" %>
+     タイトル<div class = "title"><%= f.text_area :title%></div>
+   本文<div class = "text"> <%= f.text_area :text, cols:100,rows: 40 %></div>
+    <div class = "update"><%= f.submit "更新" %></div>
   <% end %>
 </div>
