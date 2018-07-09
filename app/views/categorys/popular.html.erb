@@ -25,7 +25,7 @@
             </div>
           </div>
           <div class="story-list clearfix">
-            <%= render 'categorys/category-story-box'%>
+            <%= render partial: "application/story-box", collection: @storys, as:"story" %>
           </div>
           <div data-is="category__paginate">
             <%= paginate(@storys) %>
