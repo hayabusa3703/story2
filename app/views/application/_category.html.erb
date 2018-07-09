@@ -1,19 +1,73 @@
-<div class="ajax-index-category">
-  <div category_name="カタリエ" category_slug="katarie" class="katarie-wrapper" data-is="pages-index-bottom-category">
-    <div class="inner">
-
-<% @categorys.each do |category| %>
-  <div category_name="恋愛" category_slug="love" data-is="pages-index-bottom-category">
-    <div class="inner">
-      <div class="ajax-container">
-        <h1><%= category.name %>のストーリー</h1>
-        <div class="story-list clearfix">
-          <%= render 'application/genre_story-box'%>
-        </div>
-          <%= link_to "#{ category.name }のストーリー一欄", category_path(category), class: "catebtn" %>
-          <i class="fa-arrow-circle-right fa"></i>
-      </div>
+<div category_name="恋愛" category_slug="love" data-is="pages-index-bottom-category">
+  <div class="story__container">
+    <h1>恋愛のストーリー</h1>
+    <div class="story-list clearfix">
+       <%= render 'application/love_story-box' %>
     </div>
+      <%= link_to "恋愛のストーリー一覧", category_path(@categorys.ids[0]), class: "catebtn" %>
   </div>
-<% end %>
 </div>
+<div category_name="結婚" category_slug="marriage" data-is="pages-index-bottom-category">
+  <div class="story__container">
+    <h1>結婚のストーリー</h1>
+    <div class="story-list clearfix">
+       <%= render 'application/marriage_story-box' %>
+    </div>
+      <%= link_to "結婚のストーリー一覧", category_path(@categorys.ids[1]), class: "catebtn" %>
+  </div>
+</div>
+<div category_name="勉強" category_slug="study" data-is="pages-index-bottom-category">
+  <div class="story__container">
+    <h1>勉強のストーリー</h1>
+    <div class="story-list clearfix">
+       <%= render 'application/study_story-box' %>
+    </div>
+      <%= link_to "勉強のストーリー一覧", category_path(@categorys.ids[2]), class: "catebtn" %>
+  </div>
+</div>
+<div category_name="仕事" data-is="pages-index-bottom-category">
+  <div class="story__container">
+    <h1>仕事のストーリー</h1>
+    <div class="story-list clearfix">
+       <%= render 'application/job_story-box' %>
+    </div>
+      <%= link_to "仕事のストーリー一覧", category_path(@categorys.ids[3]), class: "catebtn" %>
+  </div>
+</div>
+<div category_name="新生活" data-is="pages-index-bottom-category">
+  <div class="story__container">
+    <h1>新生活のストーリー</h1>
+    <div class="story-list clearfix">
+       <%= render 'application/newlife_story-box' %>
+    </div>
+      <%= link_to "新生活のストーリー一覧", category_path(@categorys.ids[4]), class: "catebtn" %>
+  </div>
+</div>
+<div category_name="旅行" data-is="pages-index-bottom-category">
+  <div class="story__container">
+    <h1>旅行のストーリー</h1>
+    <div class="story-list clearfix">
+       <%= render 'application/travel_story-box' %>
+    </div>
+      <%= link_to "旅行のストーリー一覧", category_path(@categorys.ids[5]), class: "catebtn" %>
+  </div>
+</div>
+<div category_name="病気" data-is="pages-index-bottom-category">
+  <div class="story__container">
+    <h1>病気のストーリー</h1>
+    <div class="story-list clearfix">
+       <%= render 'application/sick_story-box' %>
+    </div>
+      <%= link_to "病気のストーリー一覧", category_path(@categorys.ids[6]), class: "catebtn" %>
+  </div>
+</div>
+<div category_name="日常生活" data-is="pages-index-bottom-category">
+  <div class="story__container">
+    <h1>日常生活のストーリー</h1>
+    <div class="story-list clearfix">
+       <%= render 'application/everydaylife_story-box' %>
+    </div>
+      <%= link_to "日常生活のストーリー一覧", category_path(@categorys.ids[7]), class: "catebtn" %>
+  </div>
+</div>
+
