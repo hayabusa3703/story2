@@ -26,6 +26,7 @@
       <div class="global-box">
         <div class="container">
           <div class="wall">
+            <img src="<%= @story.category.image %>" alt="<%= @story.category.name %>">
             <% if user_signed_in? && current_user.id == @story.user_id %>
              <%= link_to '編集', edit_story_path(@story), :style => "right: 115px;"%>
              <%= link_to '削除', story_path(@story), method: :delete, :style => "right: 65px;" %>
