@@ -53,18 +53,11 @@
               </div>
             </div>
             <div class="next_prev_stories clearfix">
-              <div class="prev">
-                <span>
-                  <i class="fa fa-arrow-left"></i>
-                  前編へ
-                </span>
-              </div>
-              <div class="next"></div>
               <div class="next">
-                <a href="/story/new?prev_id/"><!-- 未実装の機能のため今後リンク先を追加する予定です。-->
-                  続編を書く
-                  <i class="fa fa-arrow-pencil"></i>
-                </a>
+                <% if user_signed_in? && current_user.id == @story.user_id %> 
+                 <%= link_to "続編を書く", new_story_path(@story) %>
+                 <i class="fa fa-arrow-pencil"></i>
+                <% end %>
               </div>
             </div>
           </div>
