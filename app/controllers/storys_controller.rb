@@ -1,8 +1,8 @@
 class StorysController < ApplicationController
 
   before_action :move_to_index, except: :index
-  before_action :set_story, only: [:show, :show2, :edit, :destroy, :update]
-  before_action :set_category, only: [:index, :new, :create, :show, :show2]
+  before_action :set_story, only: %i(show show__detail edit destroy update)
+  before_action :set_category, only: [:index, :new, :create, :show, :show__detail]
   CURRENTSTORYS = 1
 
   def index

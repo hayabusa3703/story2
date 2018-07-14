@@ -23,5 +23,7 @@ Rails.application.routes.draw do
   resources :legend, only: [:index, :show]
   resources :likes,  only: [:create, :destroy]
   resources :users,  only: [:show]
-  get '/storys_detail/:id' => 'storys#show2', as: 'show2'
+  get '/storys_detail/:id' => 'storys#show__detail', as: 'show__detail'
+    delete '/like/:tweet_id' => 'likes#unlike', as: 'unlike'
+
 end
