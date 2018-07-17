@@ -26,11 +26,11 @@
       <div class="global-box">
         <div class="container">
           <div class="wall">
-            <img src="<%= @story.category.image %>" alt="<%= @story.category.name %>">
-            <% if user_signed_in? && current_user.id == @story.user_id %>
-             <%= link_to '編集', edit_story_path(@story), :style => "right: 115px;"%>
-             <%= link_to '削除', story_path(@story), method: :delete, :style => "right: 65px;" %>
-            <% end %>
+            <%= image_tag("#{@story.category.image}")%>
+              <% if user_signed_in? && current_user.id == @story.user_id %>
+                <%= link_to '編集', edit_story_path(@story), :style => "right: 115px;"%>
+                <%= link_to '削除', story_path(@story), method: :delete, :style => "right: 65px;" %>
+              <% end %>
           </div>
           <%= link_to(show__detail_path(@story.id), class: 'read') do %>
             <div class="inner">
@@ -55,8 +55,8 @@
             <div class="next_prev_stories clearfix">
               <div class="next">
                 <% if user_signed_in? && current_user.id == @story.user_id %> 
-                 <%= link_to "続編を書く", new_story_path(@story) %>
-                 <i class="fa fa-arrow-pencil"></i>
+                  <%= link_to "続編を書く", new_story_path(@story) %>
+                  <i class="fa fa-arrow-pencil"></i>
                 <% end %>
               </div>
             </div>

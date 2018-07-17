@@ -6,12 +6,12 @@
       <div class="contents-container clearfix">
         <div class="layout-column-main">
           <div id="breadcrumbs">
-             <%= link_to "TOP", root_path, class: "breadcrumbs__top" %> >
-             <%= link_to "#{@story.category.name}", category_path(@story.category_id), class: "breadcrumbs__name" %> >
-             <%= @story.title %>
+            <%= link_to "TOP", root_path, class: "breadcrumbs__top" %> >
+            <%= link_to "#{@story.category.name}", category_path(@story.category_id), class: "breadcrumbs__name" %> >
+            <%= @story.title %>
           </div>
             <div class="story-add-engagement">
-              <img src="<%= @story.category.image %>" alt="<%= @story.category.name %>">
+              <%= image_tag("#{@story.category.image}")%>
               <h2><%= @story.title %></h2>
               <div class = "writer__name" >著者 : <%=@story.user.name %></div><br>
               <%= @story.text %>
