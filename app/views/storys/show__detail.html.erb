@@ -11,9 +11,9 @@
             <%= @story.title %>
           </div>
             <div class="story-add-engagement">
-              <%= image_tag("#{@story.category.image}")%>
+              <%= image_tag(@story.category.image)%>
               <h2><%= @story.title %></h2>
-              <div class = "writer__name" >著者 : <%=@story.user.name %></div><br>
+              <div class = "writer__name" >著者 : <%= @story.user.name %></div><br>
               <%= @story.text %>
             </div>
           <%= render 'layouts/recommend' %>
