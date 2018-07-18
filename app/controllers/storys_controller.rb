@@ -1,9 +1,8 @@
 class StorysController < ApplicationController
 
   before_action :move_to_index, except: :index
-  before_action :set_story, only: [:show, :edit]
-  before_action :set_category, only: [:index, :new, :create, :show]
-  before_action :story_find, only: [:destroy, :edit, :update]
+  before_action :set_story, only: %i(show show__detail edit destroy update)
+  before_action :set_category, only: %i(index new create show show__detail)
   CURRENTSTORYS = 1
 
   def index
@@ -18,6 +17,7 @@ class StorysController < ApplicationController
 
   def new
     @story = current_user.stories.build
+    @storys = Story.where(user_id: current_user.id)
   end
 
   def create
@@ -39,10 +39,6 @@ class StorysController < ApplicationController
   private
   def set_category
     @categorys = Category.all
-  end
-
-  def story_find
-    @story = Story.find(params[:id])
   end
 
   def story_params
