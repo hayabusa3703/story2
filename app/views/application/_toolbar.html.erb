@@ -1,7 +1,7 @@
 <div class="toolbar clearfix">
   <div class="wall" style="background-image: url(https://storys.jp/images/user/wall-default.png);"></div>
   <div class="user">
-    <a class="img" href=""></a>
+    <a class="img" href=""><%= image_tag "https://img.sty.fun/t/uploads/user/second_image/173008/6b498f99.jpeg", class: "profile-image" %></a>
     <% if user_signed_in? %>
       <%= link_to "#{current_user.name}", user_path(current_user.id), class: "user-name"%>
     <% end %>
